@@ -34,7 +34,7 @@
 
     <Carousel :itemsToShow="3.95" :wrapAround="true">
     <Slide v-for="slide in 10" :key="slide">
-      <div class="carousel__item m-5">
+      <div class="carousel__item m-5 ml-2">
         <div class="card" style="width: 19rem;">
           <img class="card-img-top" src="https://cdn1.vectorstock.com/i/1000x1000/50/20/no-photo-or-blank-image-icon-loading-images-vector-37375020.jpg" alt="Card image cap">
           <div class="card-body" style="height: 10rem;">
