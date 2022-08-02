@@ -79,7 +79,7 @@
     </div>
 
     <div class="row ">
-      <div class="col">
+      <div class="col-3 m-0">
         <div class="card" style="width: 19rem;">
           <img class="card-img-top" src="https://cdn1.vectorstock.com/i/1000x1000/50/20/no-photo-or-blank-image-icon-loading-images-vector-37375020.jpg" alt="Card image cap">
           <div class="card-body" style="height: 10rem;">
@@ -87,7 +87,7 @@
           </div>
         </div>
       </div>
-            <div class="col">
+            <div class="col-3 m-0">
         <div class="card" style="width: 19rem;">
           <img class="card-img-top" src="https://cdn1.vectorstock.com/i/1000x1000/50/20/no-photo-or-blank-image-icon-loading-images-vector-37375020.jpg" alt="Card image cap">
           <div class="card-body" style="height: 10rem;">
@@ -95,7 +95,7 @@
           </div>
         </div>
       </div>
-            <div class="col">
+            <div class="col-3 m-0">
         <div class="card" style="width: 19rem;">
           <img class="card-img-top" src="https://cdn1.vectorstock.com/i/1000x1000/50/20/no-photo-or-blank-image-icon-loading-images-vector-37375020.jpg" alt="Card image cap">
           <div class="card-body" style="height: 10rem;">
@@ -103,7 +103,7 @@
           </div>
         </div>
       </div>
-            <div class="col">
+            <div class="col-3 m-0">
         <div class="card" style="width: 19rem;">
           <img class="card-img-top" src="https://cdn1.vectorstock.com/i/1000x1000/50/20/no-photo-or-blank-image-icon-loading-images-vector-37375020.jpg" alt="Card image cap">
           <div class="card-body" style="height: 10rem;">
