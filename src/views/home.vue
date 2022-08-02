@@ -78,7 +78,7 @@
       </div>
     </div>
 
-    <div class="row pl-5 pr-5">
+    <div class="row ">
       <div class="col-sm">
         <div class="card" style="width: 28rem;">
           <img class="card-img-top" src="https://cdn1.vectorstock.com/i/1000x1000/50/20/no-photo-or-blank-image-icon-loading-images-vector-37375020.jpg" alt="Card image cap">
