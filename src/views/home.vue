@@ -35,7 +35,7 @@
     <Carousel :itemsToShow="3.95" :wrapAround="true">
     <Slide v-for="slide in 10" :key="slide">
       <div class="carousel__item m-5 ml-2 mr-2">
-        <div class="card" style="width: 19rem;">
+        <div class="card" style="width: 30rem;">
           <img class="card-img-top" src="https://cdn1.vectorstock.com/i/1000x1000/50/20/no-photo-or-blank-image-icon-loading-images-vector-37375020.jpg" alt="Card image cap">
           <div class="card-body" style="height: 10rem;">
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -78,9 +78,9 @@
       </div>
     </div>
 
-    <div class="row ">
+    <div class="row pl-4 pr-4">
       <div class="col-3 m-0">
-        <div class="card" style="width: 19rem;">
+        <div class="card" style="width: 30rem;">
           <img class="card-img-top" src="https://cdn1.vectorstock.com/i/1000x1000/50/20/no-photo-or-blank-image-icon-loading-images-vector-37375020.jpg" alt="Card image cap">
           <div class="card-body" style="height: 10rem;">
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -88,7 +88,7 @@
         </div>
       </div>
             <div class="col-3 m-0">
-        <div class="card" style="width: 19rem;">
+        <div class="card" style="width: 30rem;">
           <img class="card-img-top" src="https://cdn1.vectorstock.com/i/1000x1000/50/20/no-photo-or-blank-image-icon-loading-images-vector-37375020.jpg" alt="Card image cap">
           <div class="card-body" style="height: 10rem;">
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -96,7 +96,7 @@
         </div>
       </div>
             <div class="col-3 m-0">
-        <div class="card" style="width: 19rem;">
+        <div class="card" style="width: 30rem;">
           <img class="card-img-top" src="https://cdn1.vectorstock.com/i/1000x1000/50/20/no-photo-or-blank-image-icon-loading-images-vector-37375020.jpg" alt="Card image cap">
           <div class="card-body" style="height: 10rem;">
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -104,7 +104,7 @@
         </div>
       </div>
             <div class="col-3 m-0">
-        <div class="card" style="width: 19rem;">
+        <div class="card" style="width: 30rem;">
           <img class="card-img-top" src="https://cdn1.vectorstock.com/i/1000x1000/50/20/no-photo-or-blank-image-icon-loading-images-vector-37375020.jpg" alt="Card image cap">
           <div class="card-body" style="height: 10rem;">
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
