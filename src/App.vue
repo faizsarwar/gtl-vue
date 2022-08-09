@@ -27,17 +27,17 @@
                 <button type="submit" style="border-radius: 0px 15px 15px 0px;"><i class="fa fa-search"></i></button>
               </form>
            </div>
-           
-           <div class="col-md-2 ">
-            <li v-if="$store.state.isAuthenticated">
+
+          <div class="col-md-2">
+            <li v-if="$store.state.isAuthenticated" style="list-style-type: none;">
               <div class="d-flex d-none d-md-flex flex-row align-items-center">
                 <a href="/my-account" class="nav-link" style="color:black">My Account<span class="sr-only">(current)</span></a>
                 <button @click="logout()" class="btn btn-success">Log out</button>
               </div>
             </li>
-            <li v-else>
-               <div class="d-flex d-none d-md-flex flex-row align-items-center">
-                               <div class="dropdown ">
+            <li v-else style="list-style-type: none;">
+                             <div class="d-flex d-none d-md-flex flex-row align-items-center">
+          <div class="dropdown ">
                 <button class="btn btn-primary-outline p-2 mt-0 font-weight-bold faiz mr-3 pr-3"    style="border-radius:20px; background-color:white; border-color: black;"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
   <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
@@ -55,7 +55,7 @@
             width="37"
             height="37"
             fill="black"
-            class="bi bi-cart-fill "
+            class="bi bi-cart-fill ml-5"
             viewBox="0 0 16 16"
           >
             <path
@@ -66,8 +66,11 @@
           </a>
     
                </div>    
-            </li> 
-           </div>
+              
+            </li>
+            
+          </div>     
+
        </div>
 	</div> 
 </section>
@@ -82,113 +85,34 @@
           <li class="nav-item mr-3 ml-5">
             <a class="" style="color: black" href="/">HOME</a>
           </li>
-          <li class="nav-item mr-3 ml-5 dropdown">
-            <a
-              class=""
-              style="color: black"
-              href="#"
-              id="navbarDropdownMenuLink"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              CLASS FORMATS
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a
-                class="dropdown-item mt-4 mb-4 ml-2 mr-2"
-                href="/private-1-on-1"
-                ><strong>Private 1:1</strong>
-                <p>Personilized Learnings With Hand macthed Instructors</p></a
-              >
-              <a class="dropdown-item mb-4 ml-2 mr-2" href="/self-study"
-                ><strong>On Demand</strong>
-                <p>Unlimited Access To All our self-guided Courses</p>
-              </a>
-              <a class="dropdown-item mb-4 ml-2 mr-2" href="/bootcamps"
-                ><strong>Bootcamp</strong>
-                <p>small groups short courses with live instructions</p>
-              </a>
-            </div>
+          <li class="nav-item mr-3 ml-5">
+            <a class="" style="color: black" href="/">SHOP</a>
           </li>
-          <li class="nav-item mr-3 ml-5 mr-2">
-            <a class="" style="color: black" href="/">PURCHASE A GIFT CARD</a>
+          <li class="nav-item mr-3 ml-5">
+            <a class="" style="color: black" href="/">TRIM</a>
           </li>
-          <li class="nav-item mr-3 ml-5 mr-2">
-            <a class="" style="color: black" href="/">LIFE SESSIONS</a>
+          <li class="nav-item mr-3 ml-5">
+            <a class="" style="color: black" href="/">CBD OIL</a>
           </li>
-          <li class="nav-item mr-3 ml-5 dropdown">
-            <a
-              class=""
-              style="color: black"
-              href="#"
-              id="navbarDropdownMenuLink"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              LEARN
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a
-                class="dropdown-item mt-4 mb-4 ml-2 mr-2"
-                href="/private-1-on-1"
-                ><strong>BLOG</strong>
-              </a>
-              <a class="dropdown-item mb-4 ml-2 mr-2" href="/self-study"
-                ><strong>CBD 101</strong></a
-              >
-              <a class="dropdown-item mb-4 ml-2 mr-2" href="/bootcamps"
-                ><strong>Essential Oils</strong></a
-              >
-              <a class="dropdown-item mb-4 ml-2 mr-2" href="/bootcamps"
-                ><strong>TERPENES</strong></a
-              >
-              <a class="dropdown-item mb-4 ml-2 mr-2" href="/bootcamps"
-                ><strong>FAQ</strong></a
-              >
-            </div>
+          <li class="nav-item mr-3 ml-5">
+            <a class="" style="color: black" href="/">WATER SOLUBLES</a>
+          </li>
+          <li class="nav-item mr-3 ml-5">
+            <a class="" style="color: black" href="/">TOPICAL CREAMS</a>
+          </li>
+          <li class="nav-item mr-3 ml-5">
+            <a class="" style="color: black" href="/">EDIBLES</a>
+          </li>
+          <li class="nav-item mr-3 ml-5">
+            <a class="" style="color: black" href="/">BEYOND</a>
+          </li>
+          <li class="nav-item mr-3 ml-5">
+            <a class="" style="color: black" href="/">PETS</a>
+          </li>
+          <li class="nav-item mr-3 ml-5">
+            <a class="" style="color: black" href="/">CAPSULES</a>
           </li>
 
-          <li
-            class="dropdown nav-item faiz pb-3 p-0 mt-0 mr-5 ml-5"
-            style="font-family: Times New Roman, Times, serif"
-          >
-            <button
-              class="btn btn-primary-outline p-0 mt-0 font-weight-bold faiz"
-              style="font-weight: 100"
-              type="button"
-              data-toggle="dropdown"
-            >
-              TUTORIALS
-            </button>
-
-            <ul class="dropdown-menu">
-              <li class="dropdown-item">
-                <a tabindex="-1" class="font-weight-bold" href="#">HTML</a>
-              </li>
-              <li class="dropdown-item">
-                <a tabindex="-1" class="font-weight-bold" href="#">CSS</a>
-              </li>
-              <li class="dropdown-submenu faiz">
-                <a class="test font-weight-bold" tabindex="-1" href="#"
-                  >New dropdown <span class="caret"></span
-                ></a>
-                <ul class="dropdown-menu">
-                  <li class="dropdown-item">
-                    <a tabindex="-1" class="font-weight-bold" href="#"
-                      >2nd level dropdown</a
-                    >
-                  </li>
-                  <li class="dropdown-item">
-                    <a tabindex="-1" class="font-weight-bold" href="#"
-                      >2nd level dropdown</a
-                    >
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
         </ul>
 
   </div>
@@ -911,6 +835,10 @@ b {
       transform: scaleX(1);
     }
   }
+}
+
+ul {
+    list-style-type: none;
 }
 
 @media (max-width: 190px) {
