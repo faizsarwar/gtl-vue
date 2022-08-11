@@ -144,23 +144,23 @@
 
             <ul class="">
               <li>
-                <a href="https://growtolife.com/purchase-a-gift-card/"
+                <a style="color: #818181 !important;" href="https://growtolife.com/purchase-a-gift-card/"
                   >Purchase a Gift Card</a
                 >
               </li>
               <li>
-                <a href="https://growtolife.com/life-sessions/"
+                <a style="color: #818181 !important;" href="https://growtolife.com/life-sessions/"
                   >Life Sessions</a
                 >
               </li>
               <li>
-                <a href="https://growtolife.com/learn/">Learn</a>
+                <a style="color: #818181 !important;" href="https://growtolife.com/learn/">Learn</a>
               </li>
               <li>
-                <a href="https://growtolife.com/about-us/">About Us</a>
+                <a style="color: #818181 !important;" href="https://growtolife.com/about-us/">About Us</a>
               </li>
               <li>
-                <a href="https://growtolife.com/visit-us/">Visit Us</a>
+                <a style="color: #818181 !important;" href="https://growtolife.com/visit-us/">Visit Us</a>
               </li>
             </ul>
           </div>
@@ -180,7 +180,7 @@
 
             <ul class="">
               <li>
-                <a href="https://growtolife.com/shop/">Shop</a>
+                <a style="color: #818181 !important;" href="https://growtolife.com/shop/">Shop</a>
               </li>
             </ul>
           </div>
@@ -188,7 +188,7 @@
           <hr class="clearfix w-100 d-md-none" />
 
           <!-- Grid column -->
-          <div class="col-md-4">
+          <div class="col-md-4" >
             <!-- Links -->
             <h5
               class="font-weight-bold text-uppercase mt-3 mb-4 ml-4"
@@ -197,43 +197,43 @@
               MN Made Brands
             </h5>
 
-            <ul class="ml-0">
+            <ul class="ml-0" >
               <li>
-                <a href="https://growtolife.com/pureom/">PureomEO </a>
+                <a style="color: #818181 !important;" href="https://growtolife.com/pureom/">PureomEO </a>
               </li>
               <li>
-                <a href="https://growtolife.com/grow-to-life/">Grow To Life</a>
+                <a style="color: #818181 !important;" href="https://growtolife.com/grow-to-life/">Grow To Life</a>
               </li>
               <li>
-                <a href="https://growtolife.com/hippies-at-home/"
+                <a style="color: #818181 !important;" href="https://growtolife.com/hippies-at-home/"
                   >Hippies At Home</a
                 >
               </li>
               <li>
-                <a href="https://growtolife.com/functional-botanicals/"
+                <a style="color: #818181 !important;" href="https://growtolife.com/functional-botanicals/"
                   >Functional Botanicals</a
                 >
               </li>
               <li>
-                <a href="https://growtolife.com/kuribl/">Kuribl</a>
+                <a style="color: #818181 !important;" href="https://growtolife.com/kuribl/">Kuribl</a>
               </li>
               <li>
-                <a href="https://growtolife.com/element/">Element</a>
+                <a style="color: #818181 !important;" href="https://growtolife.com/element/">Element</a>
               </li>
               <li>
-                <a href="https://growtolife.com/endo/">ENDO</a>
+                <a style="color: #818181 !important;" href="https://growtolife.com/endo/">ENDO</a>
               </li>
               <li>
-                <a href="https://growtolife.com/hemony/">Hemony</a>
+                <a style="color: #818181 !important;" href="https://growtolife.com/hemony/">Hemony</a>
               </li>
               <li>
-                <a href="https://growtolife.com/philotimo/">Philotimo</a>
+                <a style="color: #818181 !important;" href="https://growtolife.com/philotimo/">Philotimo</a>
               </li>
               <li>
-                <a href="https://growtolife.com/prana/">Prana</a>
+                <a  style="color: #818181 !important;" href="https://growtolife.com/prana/">Prana</a>
               </li>
               <li>
-                <a href="https://growtolife.com/brands/">View all brands</a>
+                <a style="color: #818181 !important;" href="https://growtolife.com/brands/">View all brands</a>
               </li>
             </ul>
           </div>
@@ -770,6 +770,9 @@ b {
     margin-top: auto;
   }
 }
+
+
+
 
 //for searchbar
 .form-inputs{
