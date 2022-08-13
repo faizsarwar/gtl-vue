@@ -5,12 +5,12 @@
             <!-- <div style="height:100px" class="invisible">
             </div> -->
 
-            <div class="mt-3">
+            <div class="mt-3 p-3">
                 <h1 > <b>  Cart</b></h1>
             </div>
 
           
-            <div class="box m-4">
+            <div class="box m-4 p-5">
                 <table class="table is-fullwidth" v-if="cartTotalLength">
                     <thead>
                         <tr>
@@ -41,7 +41,7 @@
             <!-- <div style="height:100px" class="invisible ">
             </div> -->
 
-            <div class=" box m-4" style="text-align:left">
+            <div class=" box m-4 p-4" style="text-align:left">
               <!-- <hr> -->
               <div class="row ml-3">
                 <h2 class="subtitle mt-3"><b>  Summary</b></h2>
