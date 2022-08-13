@@ -46,14 +46,16 @@
   <section class="p-2">
 
     <Carousel :itemsToShow="3.95" :wrapAround="true">
-    <Slide v-for="slide in 10" :key="slide">
+    <Slide v-for="item in this.allProducts" :key="item.id">
       <div class="carousel__item m-5 ml-2 mr-2">
-        <div class="card" style="width: 34rem;">
-          <img class="card-img-top" src="https://cdn1.vectorstock.com/i/1000x1000/50/20/no-photo-or-blank-image-icon-loading-images-vector-37375020.jpg" alt="Card image cap">
-          <div class="card-body" style="height: 10rem;">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+         <div class="card m-2 " style="width: 30rem;">
+              <img :src= item.get_image  class="card-image" alt="...">
+              <div class="card-body" style="height: 16rem;">
+                  <h5 class="card-title"><b> {{item.name}}</b></h5>
+                  <p class="card-text"><b> ${{item.price}} </b></p>
+                  <a :href="'/products/' + item.id " class="btn btn btn-success">Quick view</a>
+              </div>
           </div>
-        </div>
       </div>
     </Slide>
 
@@ -75,7 +77,10 @@
       <iframe width="560" height="315" src="https://www.youtube.com/embed/JzK2_xPkLW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
-  <Categories/>
+
+  <!--  Faqs-->
+  <Faqs/>
+  
 
 
   <section class="p-4" >
@@ -90,43 +95,20 @@
 </svg></b></h3>
       </div>
     </div>
-
     <div class="row pl-5 pr-5">
-      <div class="col-3 m-0">
-        <div class="card" style="width: 30rem;">
-          <img class="card-img-top" src="https://cdn1.vectorstock.com/i/1000x1000/50/20/no-photo-or-blank-image-icon-loading-images-vector-37375020.jpg" alt="Card image cap">
-          <div class="card-body" style="height: 10rem;">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <div class="col-3 m-0" v-for="item in this.allProducts.slice(0,4)" :key="item.id">
+         <div class="card m-2 " style="width: 30rem;">
+              <img :src= item.get_image  class="card-image" alt="...">
+              <div class="card-body" style="height: 16rem;">
+                  <h5 class="card-title"><b> {{item.name}}</b></h5>
+                  <p class="card-text"><b> ${{item.price}} </b></p>
+                  <a :href="'/products/' + item.id " class="btn btn btn-success">Quick view</a>
+              </div>
           </div>
-        </div>
-      </div>
-            <div class="col-3 m-0">
-        <div class="card" style="width: 30rem;">
-          <img class="card-img-top" src="https://cdn1.vectorstock.com/i/1000x1000/50/20/no-photo-or-blank-image-icon-loading-images-vector-37375020.jpg" alt="Card image cap">
-          <div class="card-body" style="height: 10rem;">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-            <div class="col-3 m-0">
-        <div class="card" style="width: 30rem;">
-          <img class="card-img-top" src="https://cdn1.vectorstock.com/i/1000x1000/50/20/no-photo-or-blank-image-icon-loading-images-vector-37375020.jpg" alt="Card image cap">
-          <div class="card-body" style="height: 10rem;">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
-      </div>
-            <div class="col-3 m-0">
-        <div class="card" style="width: 30rem;">
-          <img class="card-img-top" src="https://cdn1.vectorstock.com/i/1000x1000/50/20/no-photo-or-blank-image-icon-loading-images-vector-37375020.jpg" alt="Card image cap">
-          <div class="card-body" style="height: 10rem;">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-        </div>
       </div>
     </div>
+  
   </section>
-
 
   </div>
 </template>
@@ -134,10 +116,11 @@
 <script>
 
 // import HelloWorld from '@/components/HelloWorld.vue'
-import Categories from '@/components/categories.vue'
+// import Categories from '@/components/categories.vue'
 // import best_seller_slides from '../components/best-seller-slides.vue'
 // import testemonials from '../components/testemonials.vue'
-// import Faqs from '../components/Faqs.vue'
+import Faqs from '../components/Faqs.vue'
+import axios from 'axios'
 // import compare_course from '../components/compare-course.vue'
 // import explore_more_topics from '../components/explore-more-topics.vue'
 
@@ -148,19 +131,53 @@ import 'vue3-carousel/dist/carousel.css';
 
 export default defineComponent({
   name: 'HomeView',
+  data(){
+      return {
+          allProducts:[],
+          allCategories:[],
+          isLoading: true,
+          account_details:[]
+      }
+  },
   components: {
     // HelloWorld
     // blogs,
     // testemonials,
     // compare_course,
     // explore_more_topics,
-    // Faqs,
+    Faqs,
     // best_seller_slides
     Carousel,
     Slide,
     Pagination,
     Navigation,
-    Categories,
+    // Categories,
+  },
+    mounted(){
+    this.getAllProducts()
+    this.getAccountDetails()
+  },
+  methods: {
+      async getAllProducts() {
+          this.$store.commit('setIsLoading', true)
+          axios.get('/api/v1/products/')
+          .then(response=>{
+            this.allProducts=response.data
+          })
+          .catch(error=>{
+              console.log(error)
+          })
+          this.$store.commit('setIsLoading', false)
+      },
+      getAccountDetails(){
+        axios.get(`/api/v1/CustomUser/${localStorage.getItem('userid')}/`)
+          .then(response=>{
+            this.account_details=response.data
+          })
+          .catch(error=>{
+              console.log(error)
+          })
+      }
   }
 })
 </script>
@@ -201,10 +218,6 @@ export default defineComponent({
 .card-body .col {
     overflow-y:hidden !important;
     overflow-x:hidden !important;
-}
-
-.card-body{
-  height: 280px
 }
 
 p a b,label{

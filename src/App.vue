@@ -86,31 +86,31 @@
             <a class="" style="color: black" href="/">HOME</a>
           </li>
           <li class="nav-item mr-3 ml-5">
-            <a class="" style="color: black" href="/">SHOP</a>
+            <a class="" style="color: black" href="/shop-all">SHOP</a>
           </li>
           <li class="nav-item mr-3 ml-5">
-            <a class="" style="color: black" href="/">TRIM</a>
+            <a class="" style="color: black" href="/trim">TRIM</a>
           </li>
           <li class="nav-item mr-3 ml-5">
-            <a class="" style="color: black" href="/">CBD OIL</a>
+            <a class="" style="color: black" href="/cbd_oil">CBD OIL</a>
           </li>
           <li class="nav-item mr-3 ml-5">
-            <a class="" style="color: black" href="/">WATER SOLUBLES</a>
+            <a class="" style="color: black" href="/water_solubles">WATER SOLUBLES</a>
           </li>
           <li class="nav-item mr-3 ml-5">
-            <a class="" style="color: black" href="/">TOPICAL CREAMS</a>
+            <a class="" style="color: black" href="/topical_creams">TOPICAL CREAMS</a>
           </li>
           <li class="nav-item mr-3 ml-5">
-            <a class="" style="color: black" href="/">EDIBLES</a>
+            <a class="" style="color: black" href="/edibles">EDIBLES</a>
           </li>
           <li class="nav-item mr-3 ml-5">
-            <a class="" style="color: black" href="/">BEYOND</a>
+            <a class="" style="color: black" href="/beyond">BEYOND</a>
           </li>
           <li class="nav-item mr-3 ml-5">
-            <a class="" style="color: black" href="/">PETS</a>
+            <a class="" style="color: black" href="/pets">PETS</a>
           </li>
           <li class="nav-item mr-3 ml-5">
-            <a class="" style="color: black" href="/">CAPSULES</a>
+            <a class="" style="color: black" href="/capsules">CAPSULES</a>
           </li>
 
         </ul>
