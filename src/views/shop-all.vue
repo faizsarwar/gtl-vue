@@ -33,7 +33,7 @@
                     <!-- Row -->
                     <div class="row">
                         <!-- Card -->
-                        <div class="card m-2 " style="width: 18rem;" v-for="item in this.allProducts" :key="item.id">
+                        <div class="card m-2 " style="width: 28rem;" v-for="item in this.allProducts" :key="item.id">
                             <img :src= item.get_image  class="card-image" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title"><b> {{item.name}}</b></h5>
@@ -64,14 +64,8 @@
 
 
 <script>
-// import blogs from '../components/blogs.vue'
-// import testemonials from '../components/testemonials.vue'
-// import best_seller_slides from '../components/best-seller-slides.vue'
 import Faqs from '../components/Faqs.vue'
 import axios from 'axios'
-// @ is an alias to /src
-// import HelloWorld from '@/components/HelloWorld.vue'
-// import HelloWorld from '@/components/blogs.vue'
 export default {
   name: 'HomeView',
   data(){

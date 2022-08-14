@@ -252,7 +252,7 @@
               Subscribe to our newsletter
             </h5>
 
-            <form action="">
+            <form  @submit.prevent="submitForm">
               <div class="row ml-4">
                 <div class="form-group col-md-6">
                   <input
@@ -260,6 +260,7 @@
                     class="form-control"
                     id="inputEmail4"
                     placeholder="Email"
+                    v-model="email"
                   />
                 </div>
                 <button
@@ -310,10 +311,13 @@
 
 <script>
 import axios from 'axios'
+import Swal from 'sweetalert2'
 export default {
   data() {
     return {
       showMobileMenu: false,
+      email: '',
+      errors: [],
       cart: {
         items: []
       }
@@ -341,7 +345,36 @@ export default {
             this.$store.commit('removeUserId')
             this.$router.push('/')
         },
+        async submitForm() {
+            const formData = {
+                email: this.email,
+            }
+            await axios
+                .post("/api/v1/info/", formData)
+                .then(response => {
+                  console.log(response);
+                            Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Successfully Subscribed Email',
+            showConfirmButton: false,
+            timer: 1500
+          })
+                  
+                })
+                .catch(error => {
+                    if (error.response) {
+                        for (const property in error.response.data) {
+                            this.errors.push(`${property}: ${error.response.data[property]}`)
+                        }
+                    } else {
+                        this.errors.push('Something went wrong. Please try again')
+                        console.log(JSON.stringify(error))
+                    }
+                })
+        }
     },
+    
   computed: {
       cartTotalLength() {
           console.log("hi faiz",this.cart.items.length)
@@ -351,7 +384,9 @@ export default {
           }
           return totalLength
       }
-  }
+  },
+  
+
 }
 document.addEventListener("DOMContentLoaded", function(){
   window.addEventListener('scroll', function() {
