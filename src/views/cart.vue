@@ -12,8 +12,8 @@
           
             <div class="box m-4 p-5">
                 <table class="table is-fullwidth" v-if="cartTotalLength">
-                    <thead>
-                        <tr>
+                    <thead >
+                        <tr class="text-right" >
                             <th>Product</th>
                             <th>size</th>
                             <th>Price</th>

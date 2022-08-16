@@ -7,8 +7,8 @@
             <div class="column is-12 box pr-5 pl-5">
                 <table class="table is-fullwidth" v-if="cartTotalLength">
                     <thead>
-                        <tr>
-                            <th>Product</th>
+                        <tr >
+                            <th >Product</th>
                             <th>size</th>
                             <th>Price</th>
                             <th>Quantity</th>

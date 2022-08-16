@@ -13,6 +13,7 @@
 
     
       <div class="row m-5">
+
         <div class="col-lg">
           <figure class="mb-6" style="">
             <img
@@ -28,29 +29,57 @@
           </figure>
 
         </div>
-        <div class="col-lg">
+        <div class="col-lg text-left">
                     <div class="ml-4">
             <h2 class="heading mt-5"><strong> Product Details</strong></h2>
-            <p class="m-3">
-              <strong>Price Range: </strong>{{ product.priceRange }}
-            </p>
+
+            <div  class="m-4">
+                <div style="display:inline-block">
+                <h3 > <strong> Price :</strong></h3>
+                </div>
+                <div style="display:inline-block" class="ml-4">
+                <h4 > <strong style="color:black;">$ {{ product.price }} </strong></h4>
+          
+                </div>
+            </div>
+
+
+            <div  class="m-4">
+                <div style="display:inline-block">
+                <h3 > <strong> Description :</strong></h3>
+                </div>
+                <div style="display:inline-block" class="ml-4">
+                <h4 >{{ product.description }} </h4>
+                 
+                </div>
+            </div>
+
+
+            <div  class="m-4">
+                <div style="display:inline-block">
+                <h3 > <strong> Gift Wrapping : </strong></h3>
+                </div>
+                <div style="display:inline-block" class="ml-4">
+                <h4 >{{ product.giftWrapping }} </h4>
+                 
+                </div>
+            </div>
+
+
+            <div  class="m-4">
+                <div style="display:inline-block">
+                <h3 > <strong> Size : </strong></h3>
+                </div>
+                <div style="display:inline-block" class="ml-4">
+                <h4> {{product.size}} </h4>
+                 
+                </div>
+            </div>
+
 
             <!-- {{this.allVariations}}   -->
             <div class="m-4">
-              <p class="">{{ product.description }}</p>
-
-              <b>Select Size</b>
-              <div>
-                <select v-model="this.item_price">
-                  <option
-                    v-for="item in this.allVariations"
-                    :key="item.id"
-                    v-bind:value="item"
-                  >
-                    {{ item.size }}
-                  </option>
-                </select>
-              </div>
+              
               <div class="mt-3" v-if="this.item_price.price">
                 <div
                   v-if="
@@ -153,7 +182,7 @@
 
 
         <div class="row ml-5 mr-5" style="text-align: left">
-          <p class="m-3 mt-5">{{ product.description }}</p>
+          <p class="m-3 mt-5 pl-5 pr-5">{{ product.description2 }}</p>
         </div>
 
         <!-- best seller slides -->
@@ -162,6 +191,14 @@
     </div>
   </div>
 </template>
+
+<style>
+p{
+  color:black;
+}
+
+</style>
+
 
 <script>
 // import blogs from "../components/blogs.vue";
@@ -246,11 +283,9 @@ export default {
       const item = {
         product: this.product,
         quantity: this.quantity,
-        price: this.item_price.price,
+        price: this.product.price,
         category:
-          this.allVariations[
-            this.getKeyByValue(this.allVariations, this.item_price)
-          ].size,
+this.productsize,
       };
       this.$store.commit("addToCart", item);
       Swal.fire({

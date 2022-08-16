@@ -1,11 +1,12 @@
 <template>
   <!-- <div v-if="item.quantity!=0"> -->
-  <tr v-if="item.quantity != 0">
+
+  <tr v-if="item.quantity != 0" class="m-0">
     <!-- {{item}} -->
     <td>
       <a :href="'/products/' + item.product.id"> {{ item.product.name }}</a>
     </td>
-    <td>{{ item.category }}</td>
+    <td>{{ item.product.size }}</td>
 <!--  -->
               <td v-if="account_details.account_type!='Consumer' && account_details.approved==true" >
                  ${{ item.price * discount}} 
