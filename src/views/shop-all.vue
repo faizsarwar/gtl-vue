@@ -3,6 +3,15 @@
         <div style="text-align: center;" class="m-5">
             <h1 style="font-family: fantasy;" class="heading"> Order Now </h1>
         </div>
+                
+                <!-- Loader  -->
+                <loading v-model:active="isLoading"
+                 :loader="bars"
+                 :width="width"
+                 :height="height"
+                 :color="color"
+                 :can-cancel="true"
+                 :is-full-page="fullPage"/>
 
         <!-- container -->
         <div class="ml-3">
@@ -20,10 +29,6 @@
                 </div>
                 
                 <div class="col-8 ml-3">
-                    <loading :active="isLoading"
-                      :can-cancel="true"
-                      :on-cancel="onCancel"
-                      :is-full-page="true"/>
 
                   <div v-if="!this.allProducts.length ">
                     <h1 class="heading m-5">Sorry we are updating our website </h1>
@@ -66,6 +71,8 @@
 <script>
 import Faqs from '../components/Faqs.vue'
 import axios from 'axios'
+import Loading from 'vue-loading-overlay';
+import 'vue-loading-overlay/dist/vue-loading.css';
 export default {
   name: 'HomeView',
   data(){
@@ -73,6 +80,11 @@ export default {
           allProducts:[],
           allCategories:[],
           isLoading: true,
+          fullPage: true,
+          bars: "bars",
+          color:"#07ad31",
+          height: "120",
+          width: "120",
           account_details:[]
       }
   },
@@ -81,6 +93,7 @@ export default {
     // blogs,
     // testemonials,
     // best_seller_slides,
+    Loading,
     Faqs,
     // Loading
   },
@@ -109,12 +122,12 @@ export default {
           .catch(error=>{
               console.log(error)
           })
-        this.isLoading=false
       },
       getAccountDetails(){
         axios.get(`/api/v1/CustomUser/${localStorage.getItem('userid')}/`)
           .then(response=>{
-            this.account_details=response.data
+            this.account_details=response.data;
+            this.isLoading=false
           })
           .catch(error=>{
               console.log(error)

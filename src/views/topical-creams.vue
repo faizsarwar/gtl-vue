@@ -1,6 +1,15 @@
   
 <template>
   <div class="page-sign-up m-5 row">
+                <!-- loader -->
+        <loading v-model:active="isLoading"
+                 :loader="bars"
+                 :width="width"
+                 :height="height"
+                 :color="color"
+                 :can-cancel="true"
+                 :is-full-page="fullPage"/>
+
     <div class="container p-5" style="text:justify-center">
         <h1 class="heading">TOPICAL CREAMS</h1>
         <div class="pl-5 pr-5 m-5">
@@ -43,6 +52,8 @@
 
 <script>
 import axios from 'axios'
+import Loading from 'vue-loading-overlay';
+import 'vue-loading-overlay/dist/vue-loading.css';
 export default {
 name: 'topical-creams',
   data(){
@@ -50,8 +61,16 @@ name: 'topical-creams',
           allProducts:[],
           allCategories:[],
           isLoading: true,
+          fullPage: true,
+          bars: "bars",
+          color:"#07ad31",
+          height: "120",
+          width: "120",
           account_details:[]
       }
+  },
+  components: {
+    Loading,
   },
     mounted(){
     this.getAllProducts()
@@ -62,7 +81,8 @@ name: 'topical-creams',
           this.$store.commit('setIsLoading', true)
           axios.get('/api/v1/category/topical_creams/')
           .then(response=>{
-            this.allProducts=response.data
+            this.allProducts=response.data;
+            this.isLoading=false
           })
           .catch(error=>{
               console.log(error)

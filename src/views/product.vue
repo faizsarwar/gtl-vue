@@ -1,15 +1,17 @@
 <template>
   <div class="about mb-3">
+                        <!-- Loader  -->
+                <loading v-model:active="isLoading"
+                 :loader="bars"
+                 :width="width"
+                 :height="height"
+                 :color="color"
+                 :can-cancel="true"
+                 :is-full-page="fullPage"/>
     <div>
       <h1 class="m-5">
         <strong> {{ product.name }} </strong>
       </h1>
-      <loading
-        :active="isLoading"
-        :can-cancel="true"
-        :on-cancel="onCancel"
-        :is-full-page="true"
-      />
 
     
       <div class="row m-5">
@@ -213,8 +215,8 @@ import axios from "axios";
 // import { notify } from "notiwind";
 // import VueNumberInput from "@chenfengyuan/vue-number-input";
 // ES6 Modules or TypeScript
-// import Loading from "vue-loading-overlay";
-// import "vue-loading-overlay/dist/vue-loading.css";
+import Loading from "vue-loading-overlay";
+import "vue-loading-overlay/dist/vue-loading.css";
 import Swal from "sweetalert2";
 // CommonJS
 // const Swal = require('sweetalert2')
@@ -231,6 +233,11 @@ export default {
       showDismissibleAlert: false,
       item_price: 0,
       isLoading: true,
+      fullPage: true,
+      bars: "bars",
+      color:"#07ad31",
+      height: "120",
+      width: "120",
       account_details: [],
       discount: 1,
     };
@@ -241,7 +248,7 @@ export default {
     // best_seller_slides,
     // notify,
     // VueNumberInput,
-    // Loading,
+    Loading,
   },
   mounted() {
     this.getProduct();
@@ -256,6 +263,7 @@ export default {
         .get("/api/v1/products/" + this.id)
         .then((response) => {
           this.product = response.data[0];
+          this.isLoading=false
         })
         .catch((error) => {
           console.log(error);
@@ -271,7 +279,6 @@ export default {
         .catch((error) => {
           console.log(error);
         });
-      this.isLoading = false;
     },
     getKeyByValue(object, value) {
       return Object.keys(object).find((key) => object[key] === value);
@@ -284,8 +291,8 @@ export default {
         product: this.product,
         quantity: this.quantity,
         price: this.product.price,
-        category:
-this.productsize,
+                category:
+        this.productsize,
       };
       this.$store.commit("addToCart", item);
       Swal.fire({
@@ -302,7 +309,7 @@ this.productsize,
         .then((response) => {
           this.account_details = response.data;
           this.setDiscount();
-        })
+               })
         .catch((error) => {
           console.log(error);
         });
