@@ -8,18 +8,13 @@
     "
     class="p-0 m-0"
   >
-  <section class="header-main border-bottom bg-white" id="navbar_top">
+  <section class="header-main border-bottom bg-light" id="navbar_top">
 	<div class="container-fluid">
        <div class="row p-2 pt-3 pb-3 d-flex align-items-center">
            <div class="col-md-2">
-      <a href="/">
-        <img
-          class="header-logo-image mr-5"
-          src="https://cdn11.bigcommerce.com/s-nr12tlp3ii/images/stencil/200x131/400pngdpilogo_1606958801__10545.original.png"
-          alt="Grow To Life"
-          title="Grow To Life"
-        />
-      </a>
+      
+          <img :src="require('@/assets/img/logo.jpeg')" alt="" style="background-size:contain;  background-repeat: no-repeat; text-align: center;width:100%">
+
            </div>
            <div class="col-md-8 ">
               <form class="example ml-5" action="action_page.php" style="border-radius:15px;">

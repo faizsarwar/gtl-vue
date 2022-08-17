@@ -66,6 +66,7 @@
     </Carousel>
   </section>
 
+
   <section class="p-5" style="background-color:#e4f1f7">
     <h4>We’d love to hear what you think!</h4>
     <button type="button" style="border-radius:20px; background-color:white; border-color: black;" class="p-3 mt-3 btn" >
@@ -155,7 +156,7 @@ export default defineComponent({
     Navigation,
     // Categories,
   },
-    mounted(){
+  mounted(){
     this.getAllProducts()
     this.getAccountDetails()
   },
