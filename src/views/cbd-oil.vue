@@ -27,9 +27,11 @@
         <h1 class="ml-3"><b style="color:#07ad31"> Top Deals Today </b></h1>
       </div>
       <div class="ml-auto">
+      <a href="/shop-all">
         <h3 class="mr-5"><b style="color:#07ad31"> Shop More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#07ad31" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
   <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
 </svg></b></h3>
+</a>
       </div>
     </div>
     <div class="row pl-5 pr-5">

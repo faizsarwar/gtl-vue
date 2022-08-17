@@ -175,15 +175,14 @@ export default defineComponent({
   },
   methods: {
       async getAllProducts() {
-          this.$store.commit('setIsLoading', true)
           axios.get('/api/v1/products/')
           .then(response=>{
-            this.allProducts=response.data
+            this.allProducts=response.data;
+            this.isLoading= false
           })
           .catch(error=>{
               console.log(error)
           })
-          this.$store.commit('setIsLoading', false)
       },
       getAccountDetails(){
         axios.get(`/api/v1/CustomUser/${localStorage.getItem('userid')}/`)
