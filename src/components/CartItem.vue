@@ -19,7 +19,7 @@
               </td>
               <td v-else>
                  ${{ item.price }}                
-              </td>
+    </td>
 <!--  -->
     <!-- <td>${{ item.price }}</td> -->
     <td>

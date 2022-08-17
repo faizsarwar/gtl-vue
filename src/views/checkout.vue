@@ -8,12 +8,12 @@
                 <table class="table is-fullwidth" v-if="cartTotalLength">
                     <thead>
                         <tr >
-                            <th >Product</th>
-                            <th>size</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-                            <th></th>
+                            <th class="text-center">Product</th>
+                            <th class="text-center">size</th>
+                            <th class="text-center">Price</th>
+                            <th class="text-center">Quantity</th>
+                            <th class="text-center">Total</th>
+                            <th class="text-center"></th>
                         </tr>
                     </thead>
                     <tbody>
@@ -26,7 +26,7 @@
             
                     <tfoot>
                         <tr>
-                            <td colspan="2">Total</td>
+                            <td colspan="2"><h4><b> Total </b></h4></td>
                             <td></td>
                             <td>{{ cartTotalLength }}</td>
                             <td>${{ cartTotalPrice.toFixed(2) }}</td>

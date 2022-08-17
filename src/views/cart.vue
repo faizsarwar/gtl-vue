@@ -10,16 +10,16 @@
             </div>
 
           
-            <div class="box m-4 p-5">
+            <div class="box m-4">
                 <table class="table is-fullwidth" v-if="cartTotalLength">
                     <thead >
-                        <tr class="text-right" >
-                            <th>Product</th>
-                            <th>size</th>
-                            <th>Price</th>
-                            <th>Quantity</th>
-                            <th>Total</th>
-                            <th></th>
+                        <tr  >
+                            <th class="text-center">Product</th>
+                            <th class="text-center">size</th>
+                            <th class="text-center">Price</th>
+                            <th class="text-center">Quantity</th>
+                            <th class="text-center">Total</th>
+                            <th class="text-center"></th>
                         </tr>
                     </thead>
 
