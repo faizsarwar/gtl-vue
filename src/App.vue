@@ -12,6 +12,7 @@
 	<div class="container-fluid">
        <div class="row p-2 pt-3 pb-3 d-flex align-items-center">
            <div class="col-md-2">
+          
       
           <img :src="require('@/assets/img/logo.jpeg')" alt="" style="background-size:contain;  background-repeat: no-repeat; text-align: center;width:100%">
 
@@ -81,6 +82,9 @@
             <a class="" style="color: black" href="/">HOME</a>
           </li>
           <li class="nav-item mr-3 ml-5">
+            <a class="" style="color: black" href="/life-session">Life Session</a>
+          </li>
+          <li class="nav-item mr-3 ml-5">
             <a class="" style="color: black" href="/shop-all">SHOP</a>
           </li>
           <li class="nav-item mr-3 ml-5">
@@ -114,8 +118,8 @@
 </nav>      
 
 
-    <section style="overflow-x: hidden" class="body-tag">
-      <router-view />
+    <section style="overflow-x: hidden" class="body-tag " >
+      <router-view/>
     </section>
 
     <!-- Footer -->
@@ -957,4 +961,7 @@ form.example::after {
   display: table;
 }
 
+.wrapper{
+  height:100%;
+}
 </style>
