@@ -14,6 +14,31 @@ const routes = [
       component: () => import(/* webpackChunkName: "about" */ '../views/trim.vue')
     },
     {
+      path: '/blogs/:blogId',
+      name: 'blog',
+      component: () => import('../views/blog.vue')
+    },
+    {
+      path: '/blogs',
+      name: 'blogs',
+      component: () => import(/* webpackChunkName: "about" */ '../views/blogs.vue')
+    },
+    {
+      path: '/terpenes',
+      name: 'terpenes',
+      component: () => import(/* webpackChunkName: "about" */ '../views/terpenes.vue')
+    },
+    {
+      path: '/essential-oil',
+      name: 'essential-oil',
+      component: () => import(/* webpackChunkName: "about" */ '../views/essential-oil.vue')
+    },
+    {
+      path: '/cbd-101',
+      name: 'blogs',
+      component: () => import(/* webpackChunkName: "about" */ '../views/cbd-101.vue')
+    },
+    {
       path: '/cbd_oil',
       name: 'cbd',
       component: () => import(/* webpackChunkName: "about" */ '../views/cbd-oil.vue')
