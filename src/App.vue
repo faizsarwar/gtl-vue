@@ -264,12 +264,28 @@
                 ><strong>Our Communtiy</strong>
               </a>
               <a class="dropdown-item mb-4 ml-2 mr-2" href="/"
-                ><strong>Disclosures</strong>
+                ><strong>COA's</strong>
+              </a>
+              <a class="dropdown-item mb-4 ml-2 mr-2" href="/fda-disclaimer"
+                ><strong>FDA's DISCLAIMER</strong>
+              </a>         
+              <a class="dropdown-item mb-4 ml-2 mr-2" href="/refund-policy"
+                ><strong>REFUND POLICY</strong>
+              </a>
+              <a class="dropdown-item mb-4 ml-2 mr-2" href="/"
+                ><strong>PRIVACY POLICY</strong>
+              </a>
+              <a class="dropdown-item mb-4 ml-2 mr-2" href="/"
+                ><strong>TERMS OF SERVICES</strong>
+              </a>
+              <a class="dropdown-item mb-4 ml-2 mr-2" href="/"
+                ><strong>SHIPPING</strong>
               </a>
             </div>
+
           </li>
           <li class="nav-item mr-3 ml-5">
-            <a class="" style="color: black" href="/shop-all">Visit Us</a>
+            <a class="" style="color: black" href="/visit-us">Visit Us</a>
           </li>
         </ul>
       </div>

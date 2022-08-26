@@ -108,6 +108,7 @@ export default {
           axios.get('/api/v1/products/')
           .then(response=>{
             this.allProducts=response.data
+            console.log("data fetched")
           })
           .catch(error=>{
               console.log(error)

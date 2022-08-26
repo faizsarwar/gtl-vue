@@ -19,6 +19,11 @@ const routes = [
       component: () => import('../views/blog.vue')
     },
     {
+      path: '/visit-us',
+      name: 'visit-us',
+      component: () => import('../views/visit-us.vue')
+    },
+    {
       path: '/blogs',
       name: 'blogs',
       component: () => import(/* webpackChunkName: "about" */ '../views/blogs.vue')
@@ -44,8 +49,18 @@ const routes = [
       component: () => import(/* webpackChunkName: "about" */ '../views/cbd-oil.vue')
     },
     {
+      path: '/refund-policy',
+      name: 'refund-policy',
+      component: () => import(/* webpackChunkName: "about" */ '../views/refund-policy.vue')
+    },
+    {
+      path: '/fda-disclaimer',
+      name: 'fda-disclaimer',
+      component: () => import(/* webpackChunkName: "about" */ '../views/fda-disclaimer.vue')
+    },
+    {
       path: '/shop-all',
-      name: 'shop',
+      name: 'shop-all',
       component: () => import(/* webpackChunkName: "about" */ '../views/shop-all.vue')
     },
     {

@@ -120,4 +120,3 @@ a{
   color: blue;
 }
 </style>
-Footer
