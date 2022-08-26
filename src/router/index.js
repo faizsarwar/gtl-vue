@@ -54,6 +54,11 @@ const routes = [
       component: () => import(/* webpackChunkName: "about" */ '../views/refund-policy.vue')
     },
     {
+      path: '/privacy-policy',
+      name: 'privacy-policy',
+      component: () => import(/* webpackChunkName: "about" */ '../views/privacy-policy.vue')
+    },
+    {
       path: '/fda-disclaimer',
       name: 'fda-disclaimer',
       component: () => import(/* webpackChunkName: "about" */ '../views/fda-disclaimer.vue')

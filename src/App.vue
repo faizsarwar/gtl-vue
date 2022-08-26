@@ -272,7 +272,7 @@
               <a class="dropdown-item mb-4 ml-2 mr-2" href="/refund-policy"
                 ><strong>REFUND POLICY</strong>
               </a>
-              <a class="dropdown-item mb-4 ml-2 mr-2" href="/"
+              <a class="dropdown-item mb-4 ml-2 mr-2" href="/privacy-policy"
                 ><strong>PRIVACY POLICY</strong>
               </a>
               <a class="dropdown-item mb-4 ml-2 mr-2" href="/"

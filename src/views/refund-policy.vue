@@ -23,7 +23,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'HomeView',
+  name: 'refund-policy',
   data(){
       return {
           allProducts:[],
