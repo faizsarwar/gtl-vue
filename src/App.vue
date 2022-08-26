@@ -278,7 +278,7 @@
               <a class="dropdown-item mb-4 ml-2 mr-2" href="/terms_of_service"
                 ><strong>TERMS OF SERVICES</strong>
               </a>
-              <a class="dropdown-item mb-4 ml-2 mr-2" href="/"
+              <a class="dropdown-item mb-4 ml-2 mr-2" href="/Shipping"
                 ><strong>SHIPPING</strong>
               </a>
             </div>
