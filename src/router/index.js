@@ -52,6 +52,11 @@ const routes = [
       path: '/refund-policy',
       name: 'refund-policy',
       component: () => import(/* webpackChunkName: "about" */ '../views/refund-policy.vue')
+    },///terms_of_service/
+    {
+      path: '/terms_of_service',
+      name: 'terms_of_service',
+      component: () => import(/* webpackChunkName: "about" */ '../views/terms_of_service.vue')
     },
     {
       path: '/privacy-policy',
