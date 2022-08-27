@@ -23,7 +23,7 @@
               "
             />
           </div>
-          <div class="col-md-8">
+          <div class="col-md-6">
             <form
               class="example ml-5"
               action="action_page.php"
@@ -41,7 +41,50 @@
             </form>
           </div>
 
-          <div class="col-md-2">
+          <div class="col-md-3 d-flex ">  
+                      <strong>
+            <li class="nav-item mr-5 ml-3 dropdown mt-4" style="list-style-type: none;">
+            <a
+              class=" "
+              style="color: black; "
+              href="#"
+              id="navbarDropdownMenuLink"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              About Us
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item mt-4 mb-4 ml-2 mr-2" href="/"
+                ><strong>Our Communtiy</strong>
+              </a>
+              <a class="dropdown-item mb-4 ml-2 mr-2" href="/"
+                ><strong>COA's</strong>
+              </a>
+              <a class="dropdown-item mb-4 ml-2 mr-2" href="/fda-disclaimer"
+                ><strong>FDA's DISCLAIMER</strong>
+              </a>         
+              <a class="dropdown-item mb-4 ml-2 mr-2" href="/refund-policy"
+                ><strong>REFUND POLICY</strong>
+              </a>
+              <a class="dropdown-item mb-4 ml-2 mr-2" href="/privacy-policy"
+                ><strong>PRIVACY POLICY</strong>
+              </a>
+              <a class="dropdown-item mb-4 ml-2 mr-2" href="/terms_of_service"
+                ><strong>TERMS OF SERVICES</strong>
+              </a>
+              <a class="dropdown-item mb-4 ml-2 mr-2" href="/Shipping"
+                ><strong>SHIPPING</strong>
+              </a>
+              <a class="dropdown-item mb-4 ml-2 mr-2" href="/visit-us"
+                ><strong>Visit Us</strong>
+              </a>
+            </div>
+<!-- https://releafcenterchesaning.brytemap.com/ -->
+<!-- https://thereleafcenters.com/# -->
+          </li>
+     </strong>
             <li v-if="$store.state.isAuthenticated" style="list-style-type: none">
               <div class="d-flex d-none d-md-flex flex-row align-items-center">
                 <a href="/my-account" class="nav-link" style="color: black"
@@ -129,19 +172,18 @@
     </section>
 
     <nav
-      class="navbar navbar-expand-lg navbar-light mt-0 mb-0"
+      class="navbar navbar-expand-lg navbar-light mt-0 mb-0 pl-5"
       id="navbar_top"
       style="background-color: #e4f1f7; color: black"
     >
-      <div class="container-fluid pt-2">
-        <ul class="navbar-nav">
-          <li class="nav-item mr-3 ml-3">
+      <div class="container-fluid pt-2 pl-5 ml-5 pr-5 ">
+      
+
+        <ul class="navbar-nav  pl-5 pr-5 ml-3" style="width:60%">
+          <li class="nav-item mr-4 ml-5 ">
             <a class="" style="color: black" href="/">HOME</a>
           </li>
-          <li class="nav-item mr-3 ml-5">
-            <a class="" style="color: black" href="/life-session">Life Session</a>
-          </li>
-          <li class="nav-item mr-3 ml-3 dropdown">
+          <li class="nav-item mr-4 ml-5 dropdown">
             <a
               class=" dropdown-toggle"
               style="color: black"
@@ -216,10 +258,10 @@
               </div>
             </ul>
           </li>
-          <li class="nav-item mr-3 ml-5">
-            <a class="" style="color: black" href="/shop-all">Purcahse A Gift Card</a>
+          <li class="nav-item mr-4 ml-5">
+            <a class="" style="color: black" href="/life-session">Life Session</a>
           </li>
-          <li class="nav-item mr-3 ml-3 dropdown">
+          <li class="nav-item mr-4 ml-5 dropdown">
             <a
               class=" "
               style="color: black"
@@ -247,46 +289,6 @@
             </div>
           </li>
 
-          <li class="nav-item mr-3 ml-3 dropdown">
-            <a
-              class=" "
-              style="color: black"
-              href="#"
-              id="navbarDropdownMenuLink"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-            >
-              About Us
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item mt-4 mb-4 ml-2 mr-2" href="/"
-                ><strong>Our Communtiy</strong>
-              </a>
-              <a class="dropdown-item mb-4 ml-2 mr-2" href="/"
-                ><strong>COA's</strong>
-              </a>
-              <a class="dropdown-item mb-4 ml-2 mr-2" href="/fda-disclaimer"
-                ><strong>FDA's DISCLAIMER</strong>
-              </a>         
-              <a class="dropdown-item mb-4 ml-2 mr-2" href="/refund-policy"
-                ><strong>REFUND POLICY</strong>
-              </a>
-              <a class="dropdown-item mb-4 ml-2 mr-2" href="/privacy-policy"
-                ><strong>PRIVACY POLICY</strong>
-              </a>
-              <a class="dropdown-item mb-4 ml-2 mr-2" href="/terms_of_service"
-                ><strong>TERMS OF SERVICES</strong>
-              </a>
-              <a class="dropdown-item mb-4 ml-2 mr-2" href="/Shipping"
-                ><strong>SHIPPING</strong>
-              </a>
-            </div>
-
-          </li>
-          <li class="nav-item mr-3 ml-5">
-            <a class="" style="color: black" href="/visit-us">Visit Us</a>
-          </li>
         </ul>
       </div>
     </nav>
@@ -315,13 +317,6 @@
             </h5>
 
             <ul class="">
-              <li>
-                <a
-                  style="color: #818181 !important"
-                  href="https://growtolife.com/purchase-a-gift-card/"
-                  >Purchase a Gift Card</a
-                >
-              </li>
               <li>
                 <a
                   style="color: #818181 !important"
@@ -1270,6 +1265,10 @@ form.example::after {
 		min-width: 240px !important;
 		overflow-x: hidden;
 	}
+}
+
+a strong {
+  color:black;  
 }
 
 </style>

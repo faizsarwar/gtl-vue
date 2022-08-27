@@ -2,7 +2,13 @@
   <div class="home container">
     <h1><strong style="color:black" class="m-4"> Visit Us</strong></h1>
 
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2824.552927882334!2d-93.34409098423596!3d44.9324264767886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f6215286c52f05%3A0x2eacbfc77bdb1e1a!2sGrow%20To%20Life!5e0!3m2!1sen!2s!4v1661501490875!5m2!1sen!2s" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="center-elements mt-5 mb-5">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/JzK2_xPkLW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2824.552927882334!2d-93.34409098423596!3d44.9324264767886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f6215286c52f05%3A0x2eacbfc77bdb1e1a!2sGrow%20To%20Life!5e0!3m2!1sen!2s!4v1661501490875!5m2!1sen!2s" class="mt-5 mb-5" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     <div class="">    
         <h2 class="mt-5 mb-3 "><strong style="color:black" class="m-4"> Get in touch </strong></h2>

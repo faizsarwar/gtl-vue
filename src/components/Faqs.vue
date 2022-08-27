@@ -3,7 +3,7 @@
             style="text-align: center; background-color: white; border:2px solid #74B72E; overflow-y: hidden;" >
 
             <div class="m-3"  style=" overflow-y: hidden;">
-                <h1>FAQs</h1>
+                <h1>BUY HERBAL SUPPLEMENTS ONLINE FAQ</h1>
 
                 <!-- Collapsible div starts -->
 
@@ -26,9 +26,9 @@
                     </div>
 
                     <div :id="'collapse'+item.id" class="collapse " :aria-labelledby="'heading'+item.id" data-parent="#accordion">
-                        <div class="card-body row p-5">
+                        <div class="card-body row">
                             <!-- paragraph -->
-                            <p class="pl-5 pr-5">
+                            <p>
                                 {{item.description}}
                             </p>
                         </div>
@@ -49,7 +49,7 @@
 <script>
 import axios from 'axios'
 export default {
-  name: 'Faqs_',
+  name: 'Faqs-',
   data(){
       return {
           Faqs:[]

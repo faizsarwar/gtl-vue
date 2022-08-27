@@ -74,10 +74,6 @@
     </button>
   </section>
 
-    <div class="center-elements mt-3 mb-3">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/JzK2_xPkLW4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-
 
   <!--  Faqs-->
   <Faqs/>
