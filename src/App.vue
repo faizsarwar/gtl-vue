@@ -176,11 +176,11 @@
       id="navbar_top"
       style="background-color: #e4f1f7; color: black"
     >
-      <div class="container-fluid pt-2 pl-5 ml-5 pr-5 ">
+      <div class="container-fluid  pt-2 pl-5 ml-5 pr-5 ">
       
 
-        <ul class="navbar-nav  pl-5 pr-5 ml-3" style="width:60%">
-          <li class="nav-item mr-4 ml-5 ">
+        <ul class="navbar-nav d-flex justify-content-center pl-5 pr-5 ml-3" style="width:60%">
+          <li class="nav-item mr-4  ">
             <a class="" style="color: black" href="/">HOME</a>
           </li>
           <li class="nav-item mr-4 ml-5 dropdown">
@@ -193,7 +193,7 @@
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Shop 
+              SHOP
             </a>
             <ul class="dropdown-menu multi-column columns-3 pt-3 pb-3">
               <div class="row pl-5 pr-5">
@@ -218,7 +218,7 @@
                 <div class="col-sm-3">
                   <ul class="multi-column-dropdown">
                     <b><strong> Family Of Brands </strong></b>
-                                        <li class="divider"></li>
+                    <li class="divider"></li>
                     <li><a href="#">Grow to life</a></li>
                     <li><a href="#">Carpe Diem</a></li>
                     <li><a href="#">Hippies At Home</a></li>
@@ -226,14 +226,14 @@
                     <li><a href="#">Philotimo</a></li>
                     <li><a href="#">Prana Kombucha</a></li>
                     <li><a href="#">River Valley Hemp co.</a></li>
-                                        <li class="divider"></li>
+                    <li class="divider"></li>
                     <li><a href="#">Promotions</a></li>
                   </ul>
                 </div>
                 <div class="col-sm-3">
                   <ul class="multi-column-dropdown">
                     <b><strong> CBD </strong></b>
-                                        <li class="divider"></li>
+                    <li class="divider"></li>
                     <li><a href="#">Consumables</a></li>
                     <li><a href="#">Gummies</a></li>
                     <li><a href="#">Pets</a></li>
@@ -259,7 +259,7 @@
             </ul>
           </li>
           <li class="nav-item mr-4 ml-5">
-            <a class="" style="color: black" href="/life-session">Life Session</a>
+            <a class="" style="color: black" href="/life-session">LifE SESSION</a>
           </li>
           <li class="nav-item mr-4 ml-5 dropdown">
             <a
@@ -271,7 +271,7 @@
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Learn
+              LEARN
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item mt-4 mb-4 ml-2 mr-2" href="/blogs"
@@ -1236,7 +1236,7 @@ form.example::after {
 	min-width: 400px;
 }
 .dropdown-menu.columns-3 {
-	min-width: 1200px;
+	min-width: 900px;
 }
 .dropdown-menu li a {
 	padding: 5px 15px;

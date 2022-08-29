@@ -2,8 +2,12 @@
     <section class="" style="overflow-x:hidden">
         <div style="text-align: center;" class="m-5">
             <h1 style="font-family: fantasy;" class="heading"> Order Now </h1>
+            <!-- {{this.allProducts}}
+            <div class="row">
+              {{this.subcategories}}
+            </div> -->
+
         </div>
-                
                 <!-- Loader  -->
                 <loading v-model:active="isLoading"
                  :loader="bars"
@@ -16,13 +20,18 @@
         <!-- container -->
         <div class="ml-3">
             <div class="row">
-                
                 <div class="col-2 mr-3" style="text-align: left;">
                     <h4 style="font-family: fantasy;" class="heading "> Category </h4>
                     <ul class="categories" style="font-family: Impact, Haettenschweiler, sans-serif;">
                         <!-- list of Categories -->
                         <li class='mt-2' v-for="item in this.allCategories" :key="item.id">
                             <router-link :to=" item.name_without_space " > {{item.title}} </router-link>
+                            <div class="form-check" v-for="subcategory in this.subcategories[item.title]" :key="subcategory.id">
+                              <input type="checkbox" value="" @click="say(subcategory.id)"  :id="'flexCheckDefault'+ subcategory.id">
+                              <label class="form-check-label ml-5" for="checkbox">
+                                {{subcategory.title}}
+                              </label>   
+                            </div>
                         </li>
 
                     </ul>
@@ -79,12 +88,14 @@ export default {
       return {
           allProducts:[],
           allCategories:[],
+          subcategories:{},
           isLoading: true,
           fullPage: true,
+          checked: true,
           bars: "bars",
           color:"#07ad31",
-          height: "120",
-          width: "120",
+          height: 120,
+          width: 120,
           account_details:[]
       }
   },
@@ -101,8 +112,13 @@ export default {
     this.getAllProducts()
     this.getAllCategories()
     this.getAccountDetails()
+    this.getAllsubCategories()
   },
   methods: {
+      say(message) {
+
+        console.log(message)
+      },
       async getAllProducts() {
           this.$store.commit('setIsLoading', true)
           axios.get('/api/v1/products/')
@@ -118,7 +134,19 @@ export default {
       getAllCategories() {
         axios.get('/api/v1/category/')
           .then(response=>{
-            this.allCategories=response.data
+            this.allCategories=response.data;
+            
+          })
+          .catch(error=>{
+              console.log(error)
+          })
+      },
+      // SubcategoryFromCategory/
+      getAllsubCategories() {
+        axios.get('/api/v1/SubcategoryFromCategory/')
+          .then(response=>{
+            this.subcategories=response.data;
+            this.isLoading=false            
           })
           .catch(error=>{
               console.log(error)
@@ -128,7 +156,7 @@ export default {
         axios.get(`/api/v1/CustomUser/${localStorage.getItem('userid')}/`)
           .then(response=>{
             this.account_details=response.data;
-            this.isLoading=false
+            
           })
           .catch(error=>{
               console.log(error)
