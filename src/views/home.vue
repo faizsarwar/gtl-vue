@@ -77,13 +77,7 @@
 
   <!--  Faqs-->
   <Faqs/>
-        <loading v-model:active="isLoading"
-                 :loader="bars"
-                 :width="width"
-                 :height="height"
-                 :color="color"
-                 :can-cancel="true"
-                 :is-full-page="fullPage"/>
+
 
 
   <section class="p-4" >
@@ -132,8 +126,8 @@ import axios from 'axios'
 import { defineComponent } from 'vue';
 import { Carousel, Pagination, Slide, Navigation } from 'vue3-carousel';
 import 'vue3-carousel/dist/carousel.css';
-import Loading from 'vue-loading-overlay';
-import 'vue-loading-overlay/dist/vue-loading.css';
+// import Loading from 'vue-loading-overlay';
+// import 'vue-loading-overlay/dist/vue-loading.css';
 
 export default defineComponent({
   name: 'HomeView',
@@ -145,8 +139,8 @@ export default defineComponent({
           fullPage: true,
           bars: "bars",
           color:"#07ad31",
-          height: "120",
-          width: "120",
+          height: 120,
+          width: 120,
           account_details:[]
       }
   },
@@ -160,7 +154,7 @@ export default defineComponent({
     // best_seller_slides
     Carousel,
     Slide,
-    Loading,
+    // Loading,
     Pagination,
     Navigation,
     // Categories,
@@ -174,7 +168,7 @@ export default defineComponent({
           axios.get('/api/v1/products/')
           .then(response=>{
             this.allProducts=response.data;
-            this.isLoading= false
+            // this.isLoading= false
           })
           .catch(error=>{
               console.log(error)
@@ -184,7 +178,7 @@ export default defineComponent({
         axios.get(`/api/v1/CustomUser/${localStorage.getItem('userid')}/`)
           .then(response=>{
             this.account_details=response.data;
-            this.isLoading= false
+            // this.isLoading= false
           })
           .catch(error=>{
               console.log(error)
