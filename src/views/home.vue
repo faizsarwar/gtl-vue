@@ -184,6 +184,7 @@ export default defineComponent({
         axios.get(`/api/v1/CustomUser/${localStorage.getItem('userid')}/`)
           .then(response=>{
             this.account_details=response.data;
+            this.isLoading= false
           })
           .catch(error=>{
               console.log(error)
