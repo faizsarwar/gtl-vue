@@ -149,6 +149,11 @@ const routes = [
         requireLogin: true
       }
     },
+    {
+      path: '/categories/:category',
+      name: 'categories',
+      component: () => import('../views/category.vue')
+    },
     
 
 ]  

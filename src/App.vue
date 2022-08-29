@@ -187,7 +187,7 @@
             <a
               class=" dropdown-toggle"
               style="color: black"
-              href="#"
+              href="/shop-all"
               id="navbarDropdownMenuLink"
               data-toggle="dropdown"
               aria-haspopup="true"
