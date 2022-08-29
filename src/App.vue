@@ -202,30 +202,30 @@
                     <b><strong> Delta </strong></b>
                         <li class="divider"></li>
                     <li>            
-                      <a class="dropdown-item mt-4 mb-4 ml-2 mr-2" href="/">
+                      <a class="dropdown-item mt-4 mb-4 ml-2 mr-2" href="/subcategories/delta_10_gummies">
                       Delta 10 Gummies
                       </a>
                     </li>
                     <li>            
-                      <a class="dropdown-item mt-4 mb-4 ml-2 mr-2" href="/">
+                      <a class="dropdown-item mt-4 mb-4 ml-2 mr-2" href="/subcategories/delta_8_gummies">
                       Delta 8 Gummies  
                       </a>
                     </li>
                     <li class="divider"></li>
-                    <li><a href="#">Kumbucha</a></li>
+                    <li><a href="/subcategories/kumbucha">Kumbucha</a></li>
                   </ul>
                 </div>
                 <div class="col-sm-3">
                   <ul class="multi-column-dropdown">
                     <b><strong> Family Of Brands </strong></b>
                     <li class="divider"></li>
-                    <li><a href="#">Grow to life</a></li>
-                    <li><a href="#">Carpe Diem</a></li>
-                    <li><a href="#">Hippies At Home</a></li>
-                    <li><a href="#">Kuribl link</a></li>
-                    <li><a href="#">Philotimo</a></li>
-                    <li><a href="#">Prana Kombucha</a></li>
-                    <li><a href="#">River Valley Hemp co.</a></li>
+                    <li><a href="/subcategories/grow_to_life">Grow to life</a></li>
+                    <li><a href="/subcategories/carpe_diem">Carpe Diem</a></li>
+                    <li><a href="/subcategories/hippies_at_home">Hippies At Home</a></li>
+                    <li><a href="/subcategories/kuribl_link">Kuribl link</a></li>
+                    <li><a href="/subcategories/philotimo">Philotimo</a></li>
+                    <li><a href="/subcategories/prana_kombucha">Prana Kombucha</a></li>
+                    <li><a href="/subcategories/river_valley_hemp_co">River Valley Hemp co.</a></li>
                     <li class="divider"></li>
                     <li><a href="#">Promotions</a></li>
                   </ul>
@@ -234,25 +234,25 @@
                   <ul class="multi-column-dropdown">
                     <b><strong> CBD </strong></b>
                     <li class="divider"></li>
-                    <li><a href="#">Consumables</a></li>
-                    <li><a href="#">Gummies</a></li>
-                    <li><a href="#">Pets</a></li>
-                    <li><a href="#">Supplimemnts</a></li>
-                    <li><a href="#">Flower</a></li>
-                    <li><a href="#">Tinctures</a></li>
-                    <li><a href="#">Topicals</a></li>
-                    <li><a href="#">Samples</a></li>
+                    <li><a href="/subcategories/consumables">Consumables</a></li>
+                    <li><a href="/subcategories/gummies">Gummies</a></li>
+                    <li><a href="/subcategories/pets">Pets</a></li>
+                    <li><a href="/subcategories/suppliments">Supplimemnts</a></li>
+                    <li><a href="/subcategories/flower">Flower</a></li>
+                    <li><a href="/subcategories/tinctures">Tinctures</a></li>
+                    <li><a href="/subcategories/topical">Topicals</a></li>
+                    <li><a href="/subcategories/samples">Samples</a></li>
                   </ul>
                 </div>
                 <div class="col-sm-3">
                   <ul class="multi-column-dropdown">
                     <b><strong> Quality Goods </strong></b>
-                    <li><a href="#">Pets </a></li>
-                    <li><a href="#">Lifestyle</a></li>
-                    <li><a href="#">Elderly</a></li>
-                    <li><a href="#">Athletes</a></li>
-                    <li><a href="#">Sexual Health </a></li>
-                    <li><a href="#">Everyone</a></li>
+                    <li><a href="/subcategories/pets">Pets </a></li>
+                    <li><a href="/subcategories/lifestyle">Lifestyle</a></li>
+                    <li><a href="/subcategories/elderly">Elderly</a></li>
+                    <li><a href="/subcategories/athletes">Athletes</a></li>
+                    <li><a href="/subcategories/sexual_health">Sexual Health </a></li>
+                    <li><a href="/subcategories/everyone">Everyone</a></li>
                   </ul>
                 </div>
               </div>
@@ -340,7 +340,7 @@
               <li>
                 <a
                   style="color: #818181 !important"
-                  href="https://growtolife.com/visit-us/"
+                  href="/visit-usvisit-us/"
                   >Visit Us</a
                 >
               </li>
@@ -359,7 +359,7 @@
 
             <ul class="">
               <li>
-                <a style="color: #818181 !important" href="https://growtolife.com/shop/"
+                <a style="color: #818181 !important" href="/shop-all"
                   >Shop</a
                 >
               </li>

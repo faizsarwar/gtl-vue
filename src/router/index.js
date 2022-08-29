@@ -154,6 +154,11 @@ const routes = [
       name: 'categories',
       component: () => import('../views/category.vue')
     },
+    {
+      path: '/subcategories/:subcategory',
+      name: 'subcategories',
+      component: () => import('../views/subcategory.vue')
+    },
     
 
 ]  

@@ -1,7 +1,7 @@
 <template>
-    <section class="" style="overflow-x:hidden">
+    <section class="">
         <div style="text-align: center;" class="m-5">
-            <h1 style="font-family: fantasy;" class="heading"> Order Now </h1>
+            <h1 style="font-family: fantasy;" class="heading"> Order now </h1>
         </div>
                 <!-- Loader  -->
                 <loading v-model:active="isLoading"
@@ -15,12 +15,13 @@
         <!-- container -->
         <div class="ml-3">
             <div class="row">
-                <div class="col-2 mr-3" style="text-align: left;">
+                
+                <div class="col-3 " style="text-align: left;">
                     <h4 style="font-family: fantasy;" class="heading "> Category </h4>
                     <ul class="categories" style="font-family: Impact, Haettenschweiler, sans-serif;">
                         <!-- list of Categories -->
                         <li class='mt-2' v-for="item in this.allCategories" :key="item.id">
-                            <a :href="'/categories/' + item.name_without_space " > {{item.title}} </a>
+                            <a :href="'/categories/' + item.name_without_space " class="ml-3 mb-3"> {{item.title}} </a>
                             <div class="form-check" v-for="subcategory in this.subcategories[item.title]" :key="subcategory.id">
                               <input type="checkbox" value="" @click="say(subcategory.id)"  :id="'flexCheckDefault'+ subcategory.id">
                               <label class="form-check-label ml-5" for="checkbox">
@@ -30,10 +31,10 @@
                         </li>
 
                     </ul>
-                </div>
-                
-                <div class="col-8 ml-3">
 
+                </div>
+
+                <div class="col-9 ">
                   <div v-if="!this.previousProducts.length ">
                     <h1 class="heading m-5">Sorry we are updating our website </h1>
                     <p class="m-5"><strong>PLEASE Call Toll- Free 1 (833) ANASAZI to place an order.</strong></p>
@@ -53,7 +54,7 @@
                     </div>
                   </div>
                 </div>
-                
+
             </div>
         </div>
 
@@ -68,10 +69,16 @@
 
 
 <script>
+// import blogs from '../components/blogs.vue'
+// import testemonials from '../components/testemonials.vue'
+// import best_seller_slides from '../components/best-seller-slides.vue'
 import Faqs from '../components/Faqs.vue'
 import axios from 'axios'
 import Loading from 'vue-loading-overlay';
 import 'vue-loading-overlay/dist/vue-loading.css';
+// @ is an alias to /src
+// import HelloWorld from '@/components/HelloWorld.vue'
+// import HelloWorld from '@/components/blogs.vue'
 export default {
   name: 'HomeView',
   data(){
@@ -89,22 +96,17 @@ export default {
           color:"#07ad31",
           height: 120,
           width: 120,
-          account_details:[]
+          account_details:[],
+          subcategory: this.$route.params.subcategory
       }
   },
   components: {
-    // HelloWorld
-    // blogs,
-    // testemonials,
-    // best_seller_slides,
-    Loading,
     Faqs,
-    // Loading
+    Loading
   },
   mounted(){
     this.getAllProducts()
     this.getAllCategories()
-    this.getAccountDetails()
     this.getAllsubCategories()
   },
   methods: {
@@ -139,25 +141,22 @@ export default {
 
         }
       },
-      async getAllProducts() {
-          this.$store.commit('setIsLoading', true)
-          axios.get('/api/v1/products/')
+      getAllProducts() {
+          axios.get('/api/v1/subcategory/' + this.subcategory)
           .then(response=>{
             this.allProducts=response.data
             // at initial we will show all products
             this.previousProducts=response.data
-                
           })
           .catch(error=>{
               console.log(error)
           })
-          this.$store.commit('setIsLoading', false)
       },
       getAllCategories() {
         axios.get('/api/v1/category/')
           .then(response=>{
-            this.allCategories=response.data;
-            
+            this.allCategories=response.data
+             this.isLoading=false    
           })
           .catch(error=>{
               console.log(error)
@@ -174,16 +173,6 @@ export default {
               console.log(error)
           })
       },
-      getAccountDetails(){
-        axios.get(`/api/v1/CustomUser/${localStorage.getItem('userid')}/`)
-          .then(response=>{
-            this.account_details=response.data;
-            
-          })
-          .catch(error=>{
-              console.log(error)
-          })
-      }
   }
 }
 </script>
