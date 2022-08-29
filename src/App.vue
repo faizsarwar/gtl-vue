@@ -183,7 +183,7 @@
           <li class="nav-item mr-4  ">
             <a class="" style="color: black" href="/">HOME</a>
           </li>
-          <li class="nav-item mr-4 ml-5 dropdown">
+          <li class="nav-item mr-4 ml-5  dropdown">
             <a
               class=" dropdown-toggle"
               style="color: black"
@@ -232,7 +232,7 @@
                 </div>
                 <div class="col-sm-3">
                   <ul class="multi-column-dropdown">
-                   <b><strong><a href="/categories/cbd">  CBD </a></strong></b>
+                   <a href="/categories/cbd"><b><strong>  CBD </strong></b></a>
                     <li class="divider"></li>
                     <li><a href="/subcategories/consumables">Consumables</a></li>
                     <li><a href="/subcategories/gummies">Gummies</a></li>

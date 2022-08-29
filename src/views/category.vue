@@ -12,6 +12,19 @@
                  :can-cancel="true"
                  :is-full-page="fullPage"/>
 
+                     <div class="row pl-5 pr-5">
+      <!-- <div class="mr-auto">
+        <h1 class="ml-3"><b style="color:#07ad31"> Top Deals Today </b></h1>
+      </div> -->
+      <div class="ml-auto">
+      <a href="/shop-all">
+        <h3 class="mr-5"><b style="color:#07ad31"> Shop More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#07ad31" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+</svg></b></h3>
+</a>
+      </div>
+    </div>
+
         <!-- container -->
         <div class="ml-3">
             <div class="row">
@@ -21,13 +34,15 @@
                     <ul class="categories" style="font-family: Impact, Haettenschweiler, sans-serif;">
                         <!-- list of Categories -->
                         <li class='mt-2' v-for="item in this.allCategories" :key="item.id">
-                            <a :href="'/categories/' + item.name_without_space " class="ml-3 mb-3"> {{item.title}} </a>
-                            <div class="form-check" v-for="subcategory in this.subcategories[item.title]" :key="subcategory.id">
+                          <div v-if=" item.name_without_space == this.category">
+                            <a :href="'/categories/' + item.name_without_space " class="ml-3 mb-5"> {{item.title}} </a>
+                            <div class="form-check " v-for="subcategory in this.subcategories[item.title]" :key="subcategory.id">
                               <input type="checkbox" value="" @click="say(subcategory.id)"  :id="'flexCheckDefault'+ subcategory.id">
                               <label class="form-check-label ml-5" for="checkbox">
                                 {{subcategory.title}}
                               </label>   
                             </div>
+                          </div>
                         </li>
 
                     </ul>
