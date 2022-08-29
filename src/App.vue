@@ -199,7 +199,7 @@
               <div class="row pl-5 pr-5">
                 <div class="col-sm-3 ">
                   <ul class="multi-column-dropdown">
-                    <b><strong> Delta </strong></b>
+                    <a href="/categories/delta"><b><strong> Delta </strong></b></a>
                         <li class="divider"></li>
                     <li>            
                       <a class="dropdown-item mt-4 mb-4 ml-2 mr-2" href="/subcategories/delta_10_gummies">
@@ -217,7 +217,7 @@
                 </div>
                 <div class="col-sm-3">
                   <ul class="multi-column-dropdown">
-                    <b><strong> Family Of Brands </strong></b>
+                    <a href="/categories/family_of_brands"><b><strong> Family Of Brands </strong></b></a>
                     <li class="divider"></li>
                     <li><a href="/subcategories/grow_to_life">Grow to life</a></li>
                     <li><a href="/subcategories/carpe_diem">Carpe Diem</a></li>
@@ -232,7 +232,7 @@
                 </div>
                 <div class="col-sm-3">
                   <ul class="multi-column-dropdown">
-                    <b><strong> CBD </strong></b>
+                   <b><strong><a href="/categories/cbd">  CBD </a></strong></b>
                     <li class="divider"></li>
                     <li><a href="/subcategories/consumables">Consumables</a></li>
                     <li><a href="/subcategories/gummies">Gummies</a></li>
@@ -246,7 +246,7 @@
                 </div>
                 <div class="col-sm-3">
                   <ul class="multi-column-dropdown">
-                    <b><strong> Quality Goods </strong></b>
+                  <a href="/categories/quality_goods"><b><strong> Quality Goods </strong></b></a>
                     <li><a href="/subcategories/pets">Pets </a></li>
                     <li><a href="/subcategories/lifestyle">Lifestyle</a></li>
                     <li><a href="/subcategories/elderly">Elderly</a></li>

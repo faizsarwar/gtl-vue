@@ -35,8 +35,8 @@
                 <div class="col-8 ml-3">
 
                   <div v-if="!this.previousProducts.length ">
-                    <h1 class="heading m-5">Sorry we are updating our website </h1>
-                    <p class="m-5"><strong>PLEASE Call Toll- Free 1 (833) ANASAZI to place an order.</strong></p>
+                    <h1 class="heading m-5">Sorry no Products are available now </h1>
+                    <p class="m-5"><strong>PLEASE Call  (952) 405-8181  to place an order.</strong></p>
                   </div>
                   <div v-else>
                     <!-- Row -->
