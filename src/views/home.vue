@@ -168,6 +168,7 @@ export default defineComponent({
           axios.get('/api/v1/products/')
           .then(response=>{
             this.allProducts=response.data;
+            console.log("products fetched")
             // this.isLoading= false
           })
           .catch(error=>{
