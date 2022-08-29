@@ -259,7 +259,7 @@
             </ul>
           </li>
           <li class="nav-item mr-4 ml-5">
-            <a class="" style="color: black" href="/life-session">LifE SESSION</a>
+            <a class="" style="color: black" href="/life-session">LIFE SESSION</a>
           </li>
           <li class="nav-item mr-4 ml-5 dropdown">
             <a

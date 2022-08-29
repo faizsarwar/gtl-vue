@@ -2,11 +2,6 @@
     <section class="" style="overflow-x:hidden">
         <div style="text-align: center;" class="m-5">
             <h1 style="font-family: fantasy;" class="heading"> Order Now </h1>
-            <!-- {{this.allProducts}}
-            <div class="row">
-              {{this.subcategories}}
-            </div> -->
-
         </div>
                 <!-- Loader  -->
                 <loading v-model:active="isLoading"
@@ -39,7 +34,7 @@
                 
                 <div class="col-8 ml-3">
 
-                  <div v-if="!this.allProducts.length ">
+                  <div v-if="!this.previousProducts.length ">
                     <h1 class="heading m-5">Sorry we are updating our website </h1>
                     <p class="m-5"><strong>PLEASE Call Toll- Free 1 (833) ANASAZI to place an order.</strong></p>
                   </div>
@@ -47,7 +42,7 @@
                     <!-- Row -->
                     <div class="row">
                         <!-- Card -->
-                        <div class="card m-2 " style="width: 28rem;" v-for="item in this.allProducts" :key="item.id">
+                        <div class="card m-2 " style="width: 28rem;" v-for="item in this.previousProducts" :key="item.id">
                             <img :src= item.get_image  class="card-image" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title"><b> {{item.name}}</b></h5>
@@ -88,6 +83,9 @@ export default {
       return {
           allProducts:[],
           allCategories:[],
+          // filtered products will svave here
+          counter:0,
+          previousProducts:[],
           subcategories:{},
           isLoading: true,
           fullPage: true,
@@ -116,14 +114,46 @@ export default {
   },
   methods: {
       say(message) {
+        const cb = document.querySelector('#flexCheckDefault'+ message);
+        if (cb.checked){
+          // checking if counter is 0 (means it is hit for the fiurst time) so we have to clear the array to store filtered results 
+          if (this.counter==0){
+            this.previousProducts=[]
+          }
+          for (let i = 0; i < this.allProducts.length; i++) {
+            if (this.allProducts[i]['Sub_category'] == message){
+              this.previousProducts.push(this.allProducts[i])
+              // console.log(this.previousProducts)
+            }
+          }
+          this.counter+=1
+        }
+        else{
 
-        console.log(message)
+          for (let i = 0; i < this.previousProducts.length; i++) {
+            if (this.previousProducts[i]['Sub_category'] == message){
+              this.previousProducts.splice(i)
+              console.log("matched")
+            }
+          }    
+          this.counter-=1    
+          // checking if the counter is 0 then we will display all products
+          if (this.counter==0){
+            this.previousProducts=this.allProducts
+          } 
+
+        }
+        console.log(this.previousProducts)
+        console.log(cb.checked); // false
+        console.log(this.counter)
       },
       async getAllProducts() {
           this.$store.commit('setIsLoading', true)
           axios.get('/api/v1/products/')
           .then(response=>{
             this.allProducts=response.data
+            // at initial we will show all products
+            this.previousProducts=response.data
             console.log("data fetched")
           })
           .catch(error=>{
