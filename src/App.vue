@@ -99,7 +99,7 @@
                   <button
                     class="btn btn-primary-outline p-2 mt-0 font-weight-bold faiz mr-3 pr-3"
                     style="
-                      border-radius: 20px;
+                      border-radius: 13px;
                       background-color: white;
                       border-color: black;
                     "
