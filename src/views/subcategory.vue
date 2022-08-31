@@ -35,7 +35,7 @@
                     <ul class="categories" style="font-family: Impact, Haettenschweiler, sans-serif;">
                         <!-- list of Categories -->
                         <li class='mt-2' v-for="item in this.allCategories" :key="item.id">
-                          <div v-if=" item.name_without_space == this.category">
+                          <div >
                             <a :href="'/categories/' + item.name_without_space " class="ml-3 mb-5"> {{item.title}} </a>
                             <div class="form-check " v-for="subcategory in this.subcategories[item.title]" :key="subcategory.id">
                               <input type="checkbox" value="" @click="say(subcategory.id)"  :id="'flexCheckDefault'+ subcategory.id">
@@ -45,6 +45,7 @@
                             </div>
                           </div>
                         </li>
+
                     </ul>
 
                 </div>

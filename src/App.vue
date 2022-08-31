@@ -43,7 +43,7 @@
 
           <div class="col-md-3 d-flex ">  
                       <strong>
-            <li class="nav-item mr-5 ml-3 dropdown mt-4" style="list-style-type: none;">
+            <li class="nav-item mr-4 dropdown mt-4" style="list-style-type: none;">
             <a
               class=" "
               style="color: black; "
@@ -188,16 +188,12 @@
               class=" dropdown-toggle"
               style="color: black"
               href="/shop-all"
-              id="navbarDropdownMenuLink"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
             >
               SHOP
             </a>
             <ul class="dropdown-menu multi-column columns-3 pt-3 pb-3">
               <div class="row pl-5 pr-5">
-                <div class="col-sm-3 ">
+                <!-- <div class="col-sm-3 ">
                   <ul class="multi-column-dropdown">
                     <a href="/categories/delta"><b><strong> Delta </strong></b></a>
                         <li class="divider"></li>
@@ -214,8 +210,8 @@
                     <li class="divider"></li>
                     <li><a href="/subcategories/kumbucha">Kumbucha</a></li>
                   </ul>
-                </div>
-                <div class="col-sm-3">
+                </div> -->
+                <div class="col-sm">
                   <ul class="multi-column-dropdown">
                     <a href="/categories/family_of_brands"><b><strong> Family Of Brands </strong></b></a>
                     <li class="divider"></li>
@@ -230,7 +226,7 @@
                     <li><a href="#">Promotions</a></li>
                   </ul>
                 </div>
-                <div class="col-sm-3">
+                <!-- <div class="col-sm-3">
                   <ul class="multi-column-dropdown">
                    <a href="/categories/cbd"><b><strong>  CBD </strong></b></a>
                     <li class="divider"></li>
@@ -243,8 +239,8 @@
                     <li><a href="/subcategories/topical">Topicals</a></li>
                     <li><a href="/subcategories/samples">Samples</a></li>
                   </ul>
-                </div>
-                <div class="col-sm-3">
+                </div> -->
+                <div class="col-sm">
                   <ul class="multi-column-dropdown">
                   <a href="/categories/quality_goods"><b><strong> Quality Goods </strong></b></a>
                     <li><a href="/subcategories/pets">Pets </a></li>
@@ -1232,11 +1228,8 @@ form.example::after {
 .dropdown-menu {
 	min-width: 200px;
 }
-.dropdown-menu.columns-2 {
-	min-width: 400px;
-}
 .dropdown-menu.columns-3 {
-	min-width: 900px;
+	min-width: 400px;
 }
 .dropdown-menu li a {
 	padding: 5px 15px;
