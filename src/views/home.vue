@@ -1,10 +1,9 @@
 <template>
   <div class="home">
 
-      <div>
-          <img :src="require('@/assets/img/home.png')" alt=""  style="background-size:contain;  background-repeat: no-repeat; text-align: center;">
-      </div>
-        <!-- Product Disc -->
+  <div class="p-2 m-2">
+  <Swiper/>    
+  </div>        <!-- Product Disc -->
   <!-- <section style="background-color:white;">
     <div class="mt-2">
       <div class="row">
@@ -69,6 +68,8 @@
 
 
 
+
+
   <section class="p-4" >
 
     <div class="row pl-5 pr-5">
@@ -108,6 +109,7 @@
 // import best_seller_slides from '../components/best-seller-slides.vue'
 // import testemonials from '../components/testemonials.vue'
 import Faqs from '../components/Faqs.vue'
+import Swiper from '../components/swiper.vue'
 import axios from 'axios'
 // import compare_course from '../components/compare-course.vue'
 // import explore_more_topics from '../components/explore-more-topics.vue'
@@ -141,6 +143,7 @@ export default defineComponent({
     // explore_more_topics,
     Faqs,
     // best_seller_slides
+    Swiper,
     Carousel,
     Slide,
     // Loading,
