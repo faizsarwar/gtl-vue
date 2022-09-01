@@ -174,7 +174,7 @@
     <nav
       class="navbar navbar-expand-lg navbar-light mt-0 mb-0 pl-5"
       id="navbar_top"
-      style="background-color: #e4f1f7; color: black"
+      style="background-color: #c5e4f1; color: black"
     >
       <div class="container-fluid  pt-2 pl-5 ml-5 pr-5 ">
       
@@ -1202,7 +1202,7 @@ form.example button {
   float: left;
   width: 10%;
   padding: 10px;
-  background: #e4f1f7;
+  background: #c5e4f1;
   color: black;
   font-size: 17px;
   border: 1px solid grey;

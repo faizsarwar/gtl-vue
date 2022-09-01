@@ -1,19 +1,9 @@
 <template>
   <div class="home">
-      <!-- <Carousel>
-    <Slide v-for="slide in 10" :key="slide">
-      <div class="carousel__item">{{ slide }}
-                      <img src="https://cdn.shopify.com/s/files/1/0279/0267/3029/files/3_2000x.jpg?v=1577358134"  alt=""  style="background-size:contain;  background-repeat: no-repeat; text-align: center;">
 
+      <div>
+          <img :src="require('@/assets/img/home.png')" alt=""  style="background-size:contain;  background-repeat: no-repeat; text-align: center;">
       </div>
-    </Slide>
-
-    <template #addons>
-      <Navigation />
-      <Pagination />
-    </template>
-  </Carousel> -->
-      <!-- <h2>hi</h2> -->
         <!-- Product Disc -->
   <!-- <section style="background-color:white;">
     <div class="mt-2">
@@ -32,7 +22,6 @@
                 <div class="col-8 mt-5">
                     <img src="../assets/img/trustpilot-starts.png" alt=""  style="background-size:contain;  background-repeat: no-repeat; text-align: center;">
                 </div>
-
             </div>
           </div>
         </div>
@@ -67,7 +56,7 @@
   </section>
 
 
-  <section class="p-5" style="background-color:#e4f1f7">
+  <section class="p-5" style="background-color:#c5e4f1">
     <h4>We’d love to hear what you think!</h4>
     <button type="button" style="border-radius:20px; background-color:white; border-color: black;" class="p-3 mt-3 btn" >
       Give feedback

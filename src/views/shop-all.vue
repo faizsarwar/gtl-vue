@@ -42,14 +42,17 @@
                     <!-- Row -->
                     <div class="row">
                         <!-- Card -->
-                        <div class="card m-4 " style="width: 28rem;" v-for="item in this.previousProducts" :key="item.id">
-                            <img :src= item.get_image  class="card-image" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title"><b> {{item.name}}</b></h5>
-                                <p class="card-text">{{item.priceRange}}</p>
-                                <a :href="'/products/' + item.id " class="btn btn btn-success">Quick view</a>
-                            </div>
+                        <div class="col-sm-3" v-for="item in this.previousProducts" :key="item.id">
+                          <div class="card m-4 " style="width: 28rem;" >
+                              <img :src= item.get_image  class="card-image" alt="...">
+                              <div class="card-body">
+                                  <h5 class="card-title"><b> {{item.name}}</b></h5>
+                                  <p class="card-text">{{item.priceRange}}</p>
+                                  <a :href="'/products/' + item.id " class="btn btn btn-success">Quick view</a>
+                              </div>
+                          </div>
                         </div>
+
                     </div>
                   </div>
                 </div>
