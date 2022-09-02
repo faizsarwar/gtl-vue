@@ -1,7 +1,7 @@
 <template>
-  <div class="flip-example">
+  <div class="flip-example pt-0 mt-0 ">
     <swiper
-      class="swiper"
+      class="swiper pt-0 mt-0"
       :modules="modules"
       :effect="'flip'"
       :grab-cursor="true"

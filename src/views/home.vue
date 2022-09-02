@@ -8,9 +8,9 @@
 
 
   
-  <section>
-    <div class="row pl-5 pr-5 mt-3 mb-3">
-      <div class="mr-auto pl-5">
+  <!-- <section class="mt-3 mb-3   bg-danger">
+    <div class="row  ">
+      <div class="mr-auto pt-0 mt-0 pl-5"> 
          <slide3d/>
       </div>
       <div class="ml-auto pr-5">
@@ -21,19 +21,10 @@
       </a>
       </div>
     </div>
-  </section>
-
-  <section class="p-2">
-    <slide3/>
-  </section>
+  </section> -->
 
 
-  <section class="p-5" style="background-color:#c5e4f1">
-    <h4>We’d love to hear what you think!</h4>
-    <button type="button" style="border-radius:20px; background-color:white; border-color: black;" class="p-3 mt-3 btn" >
-      Give feedback
-    </button>
-  </section>
+ <!-- <slide3d/> -->
 
 
   <!--  Faqs-->
@@ -52,8 +43,8 @@ import best_seller_slides from '../components/best-seller-slides.vue'
 // import testemonials from '../components/testemonials.vue'
 import Faqs from '../components/Faqs.vue'
 import Swiper from '../components/swiper.vue'
-import slide3d from '../components/slide3d.vue'
-import slide3 from '../components/slider3.vue'
+// import slide3d from '../components/slide3d.vue'
+// import slide3 from '../components/slider3.vue'
 import axios from 'axios'
 // import compare_course from '../components/compare-course.vue'
 // import explore_more_topics from '../components/explore-more-topics.vue'
@@ -90,8 +81,8 @@ export default defineComponent({
     Swiper,
     // Carousel,
     // Slide,
-    slide3d,
-    slide3,
+    // slide3d,
+    // slide3,
     // Loading,
     // Pagination,
     // Navigation,
