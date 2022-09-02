@@ -38,7 +38,7 @@
   import 'swiper/css/pagination'
 
   export default defineComponent({
-    name: 'swiper-example-vertical',
+    name: 'swiper-example-vertical-',
     title: 'Vertical slider',
     url: import.meta.url,
       data(){
