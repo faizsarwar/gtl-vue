@@ -114,6 +114,11 @@ const routes = [
       component: () => import(/* webpackChunkName: "about" */ '../views/topical-creams.vue')
     },
     {
+      path: '/cao',
+      name: 'cao',
+      component: () => import(/* webpackChunkName: "about" */ '../views/cao.vue')
+    },
+    {
       path: '/water_solubles',
       name: 'water-solubles',
       component: () => import(/* webpackChunkName: "about" */ '../views/water-solubles.vue')

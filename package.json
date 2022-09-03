@@ -21,6 +21,7 @@
     "vue-agile": "^2.0.0",
     "vue-awesome-swiper": "^5.0.1",
     "vue-loading-overlay": "^5.0",
+    "vue-pdf": "^4.3.0",
     "vue-router": "^4.0.14",
     "vue-script-component": "^0.1.7",
     "vue-script2": "^2.1.0",

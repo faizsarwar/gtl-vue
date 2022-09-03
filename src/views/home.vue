@@ -2,32 +2,22 @@
   <div class="home">
 
   <div class="p-2 m-2">
-  <Swiper/>    
+    <Swiper/>    
+
+            <!-- <embed :src="require('@/assets/pdf/1.pdf')" type="application/pdf"   height="700px" width="500"> -->
+            <!-- <object data="data/test.pdf" type="application/pdf" width="300" height="200">
+              <a href="data/test.pdf">test.pdf</a>
+            </object> -->
+            <!-- <a :href="require('../assets/pdf/1.pdf')"></a> -->
+            <div class="bg-danger">
+            <!-- <pdf src="./1.pdf">kmlk</pdf>     -->
+            <!-- <pdf :src="require('@/assets/pdf/1.pdf')" ></pdf>           -->
+            </div>
+            <a href="./pdf/3.pdf" >click</a>
+
+
   </div> 
 
-
-
-  
-  <!-- <section class="mt-3 mb-3   bg-danger">
-    <div class="row  ">
-      <div class="mr-auto pt-0 mt-0 pl-5"> 
-         <slide3d/>
-      </div>
-      <div class="ml-auto pr-5">
-      <a href="/shop-all">
-        <h3 class="mr-5"><b style="color:#07ad31"> Shop More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#07ad31" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-          <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
-        </svg></b></h3>
-      </a>
-      </div>
-    </div>
-  </section> -->
-
-
- <!-- <slide3d/> -->
-
-
-  <!--  Faqs-->
   <Faqs/>
 
  <best_seller_slides/>
@@ -41,6 +31,7 @@
 // import Categories from '@/components/categories.vue'
 import best_seller_slides from '../components/best-seller-slides.vue'
 // import testemonials from '../components/testemonials.vue'
+// import pdf from 'vue-pdf'
 import Faqs from '../components/Faqs.vue'
 import Swiper from '../components/swiper.vue'
 // import slide3d from '../components/slide3d.vue'
@@ -79,6 +70,7 @@ export default defineComponent({
     Faqs,
     best_seller_slides,
     Swiper,
+    // pdf,
     // Carousel,
     // Slide,
     // slide3d,

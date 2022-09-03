@@ -59,7 +59,7 @@
               <a class="dropdown-item mt-4 mb-4 ml-2 mr-2" href="/"
                 ><strong>Our Communtiy</strong>
               </a>
-              <a class="dropdown-item mb-4 ml-2 mr-2" href="/"
+              <a class="dropdown-item mb-4 ml-2 mr-2" href="/cao"
                 ><strong>COA's</strong>
               </a>
               <a class="dropdown-item mb-4 ml-2 mr-2" href="/fda-disclaimer"
