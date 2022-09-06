@@ -4,16 +4,6 @@
   <div class="p-2 m-2">
     <Swiper/>    
 
-            <!-- <embed :src="require('@/assets/pdf/1.pdf')" type="application/pdf"   height="700px" width="500"> -->
-            <!-- <object data="data/test.pdf" type="application/pdf" width="300" height="200">
-              <a href="data/test.pdf">test.pdf</a>
-            </object> -->
-            <!-- <a :href="require('../assets/pdf/1.pdf')"></a> -->
-            <div class="bg-danger">
-            <!-- <pdf src="./1.pdf">kmlk</pdf>     -->
-            <!-- <pdf :src="require('@/assets/pdf/1.pdf')" ></pdf>           -->
-            </div>
-            <a href="./pdf/3.pdf" >click</a>
 
 
   </div> 
