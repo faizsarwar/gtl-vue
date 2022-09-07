@@ -30,7 +30,7 @@
         <div class="ml-3">
             <div class="row">
                 
-                <div class="col-3 " style="text-align: left;">
+                <div class="col-3 w3-sans-serif" style="text-align: left;">
                     <h4 style="font-family: fantasy;" class="heading "> Category </h4>
                     <ul class="categories" style="font-family: Impact, Haettenschweiler, sans-serif;">
                         <!-- list of Categories -->
@@ -59,7 +59,7 @@
                     <!-- Row -->
                     <div class="row">
                         <!-- Card -->
-                        <div class="card m-4 " style="width: 28rem;" v-for="item in this.previousProducts" :key="item.id">
+                        <div class="card  ml-5 mr-5 mt-4 mb-4" style="width: 28rem;" v-for="item in this.previousProducts" :key="item.id">
                             <img :src= item.get_image  class="card-image" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title"><b> {{item.name}}</b></h5>
