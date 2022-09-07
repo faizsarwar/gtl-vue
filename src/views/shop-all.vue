@@ -62,7 +62,7 @@
 
         <!--  Faqs-->
         <Faqs/>
-
+         <best_seller_slides/>
     </section>
 
 
@@ -74,6 +74,7 @@
 import Faqs from '../components/Faqs.vue'
 import axios from 'axios'
 import Loading from 'vue-loading-overlay';
+import best_seller_slides from '../components/best-seller-slides.vue'
 import 'vue-loading-overlay/dist/vue-loading.css';
 export default {
   name: 'HomeView',
@@ -99,7 +100,7 @@ export default {
     // HelloWorld
     // blogs,
     // testemonials,
-    // best_seller_slides,
+    best_seller_slides,
     Loading,
     Faqs,
     // Loading

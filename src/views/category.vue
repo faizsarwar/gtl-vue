@@ -76,6 +76,9 @@
         <!--  Faqs-->
         <Faqs/>
 
+         <best_seller_slides/>
+
+
     </section>
 
 
@@ -86,7 +89,7 @@
 <script>
 // import blogs from '../components/blogs.vue'
 // import testemonials from '../components/testemonials.vue'
-// import best_seller_slides from '../components/best-seller-slides.vue'
+import best_seller_slides from '../components/best-seller-slides.vue'
 import Faqs from '../components/Faqs.vue'
 import axios from 'axios'
 import Loading from 'vue-loading-overlay';
@@ -117,7 +120,8 @@ export default {
   },
   components: {
     Faqs,
-    Loading
+    Loading,
+    best_seller_slides
   },
   mounted(){
     this.getAllProducts()
