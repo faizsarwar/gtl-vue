@@ -29,7 +29,7 @@
         <div class="ml-3">
             <div class="row">
                 
-                <div class="col-3 w3-sans-serif " style="text-align: left;">
+                <div class="col-3 w3-monospace " style="text-align: left;">
                     <h4 style="font-family: fantasy;" class="heading "> Category </h4>
                     <ul class="categories" style="font-family: Impact, Haettenschweiler, sans-serif;">
                         <!-- list of Categories -->
