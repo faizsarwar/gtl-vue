@@ -31,18 +31,16 @@
                 
                 <div class="col-3 w3-monospace " style="text-align: left;">
                     <h4 style="font-family: fantasy;" class="heading "> Category </h4>
-                    <ul class="categories" style="font-family: Impact, Haettenschweiler, sans-serif;">
+                    <ul class="categories ml-5">
                         <!-- list of Categories -->
                         <li class='mt-2' v-for="item in this.allCategories" :key="item.id">
-                          <div v-if=" item.name_without_space == this.category">
-                            <a :href="'/categories/' + item.name_without_space " class="ml-3 mb-5"> {{item.title}} </a>
-                            <div class="form-check " v-for="subcategory in this.subcategories[item.title]" :key="subcategory.id">
+                            <a :href="'/categories/' + item.name_without_space "  > {{item.title}} </a>
+                            <div class="form-check" v-for="subcategory in this.subcategories[item.title]" :key="subcategory.id">
                               <input type="checkbox" value="" @click="say(subcategory.id)"  :id="'flexCheckDefault'+ subcategory.id">
-                              <label class="form-check-label ml-5" for="checkbox">
+                              <label class="form-check-label ml-5" for="checkbox" style="font-weight: normal; color:black !important">
                                 {{subcategory.title}}
                               </label>   
                             </div>
-                          </div>
                         </li>
 
                     </ul>
