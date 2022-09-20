@@ -26,14 +26,17 @@
           <div class="col-md-6">
             <form
               class="example ml-5"
-              action="action_page.php"
               style="border-radius: 15px"
+              @submit.prevent="submitsearch"
             >
               <input
                 type="text"
                 placeholder="Search.."
                 name="search"
                 style="border-radius: 15px 0px 0px 15px"
+                v-model="searchItem"
+                
+                
               />
               <button type="submit" style="border-radius: 0px 15px 15px 0px">
                 <i class="fa fa-search"></i>
@@ -99,8 +102,8 @@
                   <button
                     class="btn btn-primary-outline p-2 mt-0 font-weight-bold faiz mr-3 pr-3"
                     style="
-                      border-radius: 13px;
-                      background-color: white;
+                      border-radius: 10px;
+                      background-color: #87a238;
                       border-color: black;
                     "
                     type="button"
@@ -174,7 +177,7 @@
     <nav
       class="navbar navbar-expand-lg navbar-light mt-0 mb-0 pl-5"
       id="navbar_top"
-      style="background-color: #c5e4f1; color: black"
+      style="background-color: #7ba229; color: black"
     >
       <div class="container-fluid  pt-2 pl-5 ml-5 pr-5 ">
       
@@ -316,7 +319,7 @@
               <li>
                 <a
                   style="color: #818181 !important"
-                  href="https://growtolife.com/life-sessions/"
+                  href="/life-session"
                   >Life Sessions</a
                 >
               </li>
@@ -326,13 +329,13 @@
                 >
               </li>
 
-              <li>
+              <!-- <li>
                 <a
                   style="color: #818181 !important"
                   href="https://growtolife.com/about-us/"
                   >About Us</a
                 >
-              </li>
+              </li> -->
               <li>
                 <a
                   style="color: #818181 !important"
@@ -372,38 +375,38 @@
             </h5>
 
             <ul class="ml-0">
-              <li>
+              <!-- <li>
                 <a style="color: #818181 !important" href="https://growtolife.com/pureom/"
                   >PureomEO
                 </a>
-              </li>
+              </li> -->
               <li>
                 <a
                   style="color: #818181 !important"
-                  href="https://growtolife.com/grow-to-life/"
+                  href="/subcategories/grow_to_life"
                   >Grow To Life</a
                 >
               </li>
               <li>
                 <a
                   style="color: #818181 !important"
-                  href="https://growtolife.com/hippies-at-home/"
+                  href="/subcategories/hippies_at_home"
                   >Hippies At Home</a
                 >
               </li>
-              <li>
+              <!-- <li>
                 <a
                   style="color: #818181 !important"
                   href="https://growtolife.com/functional-botanicals/"
                   >Functional Botanicals</a
                 >
-              </li>
+              </li> -->
               <li>
-                <a style="color: #818181 !important" href="https://growtolife.com/kuribl/"
+                <a style="color: #818181 !important" href="/subcategories/kuribl_link"
                   >Kuribl</a
                 >
               </li>
-              <li>
+              <!-- <li>
                 <a
                   style="color: #818181 !important"
                   href="https://growtolife.com/element/"
@@ -419,21 +422,21 @@
                 <a style="color: #818181 !important" href="https://growtolife.com/hemony/"
                   >Hemony</a
                 >
-              </li>
+              </li> -->
               <li>
                 <a
                   style="color: #818181 !important"
-                  href="https://growtolife.com/philotimo/"
+                  href="/subcategories/philotimo"
                   >Philotimo</a
                 >
               </li>
               <li>
-                <a style="color: #818181 !important" href="https://growtolife.com/prana/"
+                <a style="color: #818181 !important" href="/subcategories/prana_kombucha"
                   >Prana</a
                 >
               </li>
               <li>
-                <a style="color: #818181 !important" href="https://growtolife.com/brands/"
+                <a style="color: #818181 !important" href="/shop-all"
                   >View all brands</a
                 >
               </li>
@@ -588,6 +591,7 @@ export default {
     return {
       showMobileMenu: false,
       email: "",
+      searchItem:"",
       errors: [],
       cart: {
         items: [],
@@ -615,6 +619,9 @@ export default {
       this.$store.commit("removeToken");
       this.$store.commit("removeUserId");
       this.$router.push("/");
+    },
+    async submitsearch(){
+      this.$router.push('/search/'+this.searchItem)
     },
     async submitForm() {
       const formData = {
@@ -1202,7 +1209,7 @@ form.example button {
   float: left;
   width: 10%;
   padding: 10px;
-  background: #c5e4f1;
+  background: #7ba229;
   color: black;
   font-size: 17px;
   border: 1px solid grey;

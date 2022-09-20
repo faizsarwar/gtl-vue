@@ -10,7 +10,7 @@
             </div>
 
           
-            <div class="box m-4">
+            <div class="box m-4 pt-5 pb-5">
                 <table class="table is-fullwidth" v-if="cartTotalLength">
                     <thead >
                         <tr  >
@@ -43,8 +43,8 @@
 
             <div class=" box m-4 p-4" style="text-align:left">
               <!-- <hr> -->
-              <div class="row ml-3">
-                <h2 class="subtitle mt-3"><b>  Summary</b></h2>
+              <div class="row ml-3 pt-5 pb-5">
+                <h2 class="subtitle mt-3 mb-3"><b>  Summary</b></h2>
               </div>
               <div class=" ml-5">
                   <div class="row">
@@ -55,7 +55,7 @@
                         $ {{ cartTotalPrice }}
                       </div>
                   </div>
-                  <div class="row">
+                  <div class="row mb-3">
                       <div class="col-2">
                         <b>Total Items</b>
                       </div>
@@ -65,7 +65,7 @@
                   </div>
               </div>
               <div class="row ml-5">
-                <a href="/checkout" class="btn btn btn-success mt-3 mb-3" style="color: white">Proceed to checkout</a>
+                <a href="/checkout" class="btn btn  mt-3 mb-3" style="color: white; background-color:#2a7494">Proceed to checkout</a>
               </div>
 
             </div>

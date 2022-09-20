@@ -46,8 +46,8 @@
                           <div class="card ml-5 mr-5 mt-4 mb-4" style="width: 28rem;" >
                               <img :src= item.get_image  class="card-image" alt="...">
                               <div class="card-body">
-                                  <h5 class="card-title"><b> {{item.name}}</b></h5>
-                                  <p class="card-text">{{item.priceRange}}</p>
+                                  <h5 class="card-title"><b style="color: #2a7494;"> {{item.name}}</b></h5>
+                                  <p class="card-text">${{item.price}}</p>
                                   <a :href="'/products/' + item.id " class="btn btn btn-success">Quick view</a>
                               </div>
                           </div>

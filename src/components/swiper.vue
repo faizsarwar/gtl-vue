@@ -3,9 +3,11 @@
     class="swiper"
     :modules="modules"
     direction="vertical"
-    :pagination="{ clickable: true }"
+    :pagination='{ "clickable": true }'
+    :autoplay="autoplay"
+    
   >
-    <swiper-slide class="slide m-2 " v-for="item in this.allProducts" :key="item.id">
+    <swiper-slide class="slide m-2 " v-for="item in this.allProducts" :key="item.id" >
         <div class="row w-100 pl-5 pr-5">
             <div class="col-6 pl-5">
                 <img :src= item.get_image  class="card-image" alt="...">
@@ -32,10 +34,11 @@
 <script >
   import { defineComponent } from 'vue'
   import axios from 'axios'
-  import { Pagination } from 'swiper'
+  import { Pagination, Autoplay } from 'swiper'
   import { Swiper, SwiperSlide } from 'swiper/vue'
   import 'swiper/css'
   import 'swiper/css/pagination'
+  import 'swiper/css/autoplay'
 
   export default defineComponent({
     name: 'swiper-example-vertical-',
@@ -44,6 +47,10 @@
       data(){
       return {
           allProducts:[],
+          autoplay: {
+            delay: 4000,
+            disableOnInteraction: false
+          },
       }
   },
     components: {
@@ -68,7 +75,7 @@
     },
     setup() {
       return {
-        modules: [Pagination]
+        modules: [Pagination,Autoplay]
       }
     }
   })

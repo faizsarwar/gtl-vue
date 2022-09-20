@@ -22,15 +22,15 @@
     </td>
 <!--  -->
     <!-- <td>${{ item.price }}</td> -->
-    <td>
+    <td class="d-flex jsutify-content-center center_elements">
       <a @click="decrementQuantity(item)"
         ><svg
           xmlns="http://www.w3.org/2000/svg"
           width="25"
           height="25"
-          style="color: green"
+          style="color: #2a7494"
           fill="currentColor"
-          class="bi bi-dash"
+          class="bi bi-dash ml-2 mr-2"
           viewBox="0 0 16 16"
         >
           <path
@@ -43,9 +43,9 @@
           xmlns="http://www.w3.org/2000/svg"
           width="25"
           height="25"
-          style="color: green"
+          style="color: #2a7494"
           fill="currentColor"
-          class="bi bi-plus"
+          class="bi bi-plus ml-2 mr-2"
           viewBox="0 0 16 16"
         >
           <path

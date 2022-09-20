@@ -109,6 +109,11 @@ const routes = [
       component: () => import('../views/product.vue')
     },
     {
+      path: '/search/:productName',
+      name: 'search',
+      component: () => import('../views/searchpage.vue')
+    },
+    {
       path: '/topical_creams',
       name: 'topical-creams',
       component: () => import(/* webpackChunkName: "about" */ '../views/topical-creams.vue')

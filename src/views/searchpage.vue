@@ -12,24 +12,25 @@
                  :can-cancel="true"
                  :is-full-page="fullPage"/>
 
-                     <div class="row pl-5 pr-5">
-      <!-- <div class="mr-auto">
-        <h1 class="ml-3"><b style="color:#07ad31"> Top Deals Today </b></h1>
-      </div> -->
-      <div class="ml-auto">
-      <a href="/shop-all">
-        <h3 class="mr-5"><b style="color:#2a7494"> Shop More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#07ad31" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-  <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
-</svg></b></h3>
-</a>
-      </div>
-    </div>
+
+          <div class="row pl-5 pr-5">
+              <!-- <div class="mr-auto">
+                <h1 class="ml-3"><b style="color:#07ad31"> Top Deals Today </b></h1>
+              </div> -->
+              <div class="ml-auto">
+              <a href="/shop-all">
+                      <h3 class="mr-5"><b style="color:#2a7494"> Shop More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#07ad31" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+              </svg></b></h3>
+              </a>
+              </div>
+            </div>
 
         <!-- container -->
         <div class="ml-3">
             <div class="row">
                 
-                <div class="col-3 w3-monospace " style="text-align: left;">
+                <div class="col-3 w3-monospace" style="text-align: left;">
                     <h4 style="font-family: fantasy;" class="heading "> Category </h4>
                     <ul class="categories ml-5">
                         <!-- list of Categories -->
@@ -73,10 +74,7 @@
 
         <!--  Faqs-->
         <Faqs/>
-
          <best_seller_slides/>
-
-
     </section>
 
 
@@ -96,7 +94,7 @@ import 'vue-loading-overlay/dist/vue-loading.css';
 // import HelloWorld from '@/components/HelloWorld.vue'
 // import HelloWorld from '@/components/blogs.vue'
 export default {
-  name: 'HomeView',
+  name: 'search-',
   data(){
       return {
           allProducts:[],
@@ -113,7 +111,7 @@ export default {
           height: 120,
           width: 120,
           account_details:[],
-          category: this.$route.params.category
+          productName: this.$route.params.productName
       }
   },
   components: {
@@ -125,6 +123,7 @@ export default {
     this.getAllProducts()
     this.getAllCategories()
     this.getAllsubCategories()
+    this.getSearchedItem()
   },
   methods: {
       say(message) {
@@ -158,12 +157,31 @@ export default {
 
         }
       },
+      getSearchedItem(){
+                   // at initial we will show all products
+            for (let i = 0; i < this.allProducts.length; i++) {
+                if (this.allProducts[i]['name'].toUpperCase().includes(this.productName.toUpperCase())){
+                // this.previousProducts=[]
+                this.previousProducts.push(this.allProducts[i])
+                console.log(this.allProducts[i]['name'])
+                }
+            }
+        console.log("function executed",this.productName)
+      },
       getAllProducts() {
-          axios.get('/api/v1/productscategory/' + this.category)
+          axios.get('/api/v1/products/' )
           .then(response=>{
-            this.allProducts=response.data
+            this.allProducts=response.data;
             // at initial we will show all products
-            this.previousProducts=response.data
+            for (let i = 0; i < this.allProducts.length; i++) {
+                console.log(this.allProducts[i]['name'].toUpperCase().includes(this.productName.toUpperCase().trim()))
+                if (this.allProducts[i]['name'].toUpperCase().includes(this.productName.toUpperCase())){
+                // this.previousProducts=[]
+                this.previousProducts.push(this.allProducts[i])
+
+                }
+            }
+            console.log("function executed produtcs",this.productName)
           })
           .catch(error=>{
               console.log(error)
