@@ -1,10 +1,10 @@
 <template>
   <div class="home">
+    <homeSwiper/>
+
 
   <div class="p-2 m-2">
     <Swiper/>    
-
-
 
   </div> 
 
@@ -24,6 +24,7 @@ import best_seller_slides from '../components/best-seller-slides.vue'
 // import pdf from 'vue-pdf'
 import Faqs from '../components/Faqs.vue'
 import Swiper from '../components/swiper.vue'
+import homeSwiper from '../components/homeslider.vue'
 // import slide3d from '../components/slide3d.vue'
 // import slide3 from '../components/slider3.vue'
 import axios from 'axios'
@@ -60,6 +61,7 @@ export default defineComponent({
     Faqs,
     best_seller_slides,
     Swiper,
+    homeSwiper
     // pdf,
     // Carousel,
     // Slide,
