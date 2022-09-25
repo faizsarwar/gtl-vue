@@ -43,7 +43,7 @@
                     <div class="row">
                         <!-- Card -->
                         <div class="col-sm-3" v-for="item in this.previousProducts" :key="item.id">
-                          <div class="card ml-5 mr-5 mt-4 mb-4" style="width: 28rem;" >
+                          <div class="card ml-5 mr-5 mt-4 mb-4" >
                               <img :src= item.get_image  class="card-image" alt="...">
                               <div class="card-body">
                                   <h5 class="card-title"><b style="color: #2a7494;"> {{item.name}}</b></h5>
