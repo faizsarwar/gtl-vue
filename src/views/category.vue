@@ -29,7 +29,7 @@
         <div class="ml-3">
             <div class="row">
                 
-                <div class="col-3 w3-monospace " style="text-align: left;">
+                <div class="col-sm-3 w3-monospace " style="text-align: left;">
                     <h4 style="font-family: fantasy;" class="heading "> Category </h4>
                     <ul class="categories ml-5">
                         <!-- list of Categories -->
@@ -47,7 +47,7 @@
 
                 </div>
 
-                <div class="col-9 ">
+                <div class="col-lg ">
                   <div v-if="!this.previousProducts.length ">
                     <h1 class="heading m-5">Sorry no Products are available now </h1>
                     <p class="m-5"><strong>PLEASE Call  (952) 405-8181  to place an order.</strong></p>
@@ -55,15 +55,18 @@
                   <div v-else>
                     <!-- Row -->
                     <div class="row">
+                      <div class="col-sm-3">
                         <!-- Card -->
-                        <div class="card  ml-5 mr-5 mt-4 mb-4" style="width: 28rem;" v-for="item in this.previousProducts" :key="item.id">
-                            <img :src= item.get_image  class="card-image" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title"><b style="color: #2a7494;"> {{item.name}}</b></h5>
-                                <p class="card-text">${{item.price}}</p>
-                                <a :href="'/products/' + item.id " class="btn btn btn-success">Quick view</a>
-                            </div>
+                        <div class="card  ml-5 mr-5 mt-4 mb-4" style="width: 26rem;" v-for="item in this.previousProducts" :key="item.id">
+                          <img :src= item.get_image  class="card-image" alt="...">
+                          <div class="card-body">
+                              <h5 class="card-title"><b style="color: #2a7494;"> {{item.name}}</b></h5>
+                              <p class="card-text">${{item.price}}</p>
+                              <a :href="'/products/' + item.id " class="btn btn btn-success">Quick view</a>
+                          </div>
                         </div>
+                      </div>
+
                     </div>
                   </div>
                 </div>

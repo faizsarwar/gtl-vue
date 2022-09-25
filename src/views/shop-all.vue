@@ -15,7 +15,7 @@
         <!-- container -->
         <div class="ml-3">
             <div class="row">
-                <div class="col-2 mr-3 w3-monospace" style="text-align: left;">
+                <div class="col-sm-3 mr-3 w3-monospace" style="text-align: left;">
                     <h4 style="font-family: fantasy;" class="heading "> Category </h4>
                     <ul class="categories ml-5">
                         <!-- list of Categories -->
@@ -32,7 +32,7 @@
                     </ul>
                 </div>
                 
-                <div class="col-8 ml-3">
+                <div class="col-lg ml-3">
 
                   <div v-if="!this.previousProducts.length ">
                     <h1 class="heading m-5">Sorry no Products are available now </h1>
