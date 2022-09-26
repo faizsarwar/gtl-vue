@@ -15,7 +15,7 @@
     </div>
     <div class="row pl-5 pr-5">
       <div class="col-sm-3 m-0" v-for="item in this.allProducts.slice(0,4)" :key="item.id">
-         <div class="card m-2 " style="width: 30rem;">
+         <div class="card m-2 " >
               <img :src= item.get_image  class="card-image" alt="...">
               <div class="card-body" style="height: 16rem;">
                   <h5 class="card-title"><b style="color: #2a7494;"> {{item.name}}</b></h5>
@@ -70,9 +70,6 @@ div{
 }
 .card , .card-body{
     overflow-x:hidden;
-}
-.card-img-top{
-    height:200px;
 }
 .card{
     border-radius: 12px;
